@@ -2,3 +2,10 @@ baseURL = 'https://woojae.github.io/'
 languageCode = 'en-us'
 title = 'Woojae'
 theme = 'ananke'
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Post"
+    url = "/posts/"
+    weight = -200

@@ -6,7 +6,14 @@
     <description>Recent content in Posts on Woojae</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Mon, 26 Aug 2024 20:10:06 +0900</lastBuildDate>
     <atom:link href="https://woojae.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>https://woojae.github.io/posts/my-first-post/</link>
+      <pubDate>Mon, 26 Aug 2024 20:10:06 +0900</pubDate>
+      <guid>https://woojae.github.io/posts/my-first-post/</guid>
+      <description>Introduction I&amp;rsquo;ve finally decided to retire my old Tumblr page. It&amp;rsquo;s honestly surprising that it’s still functioning after a decade of neglect, but the time has come to move on. I&amp;rsquo;m transitioning to Hugo, a static site generator. I chose Hugo for my new website because it allows me to host it for free, and a static site offers the scalability and longevity I’m looking for. More complex setups eventually break down as frameworks become obsolete.</description>
+    </item>
   </channel>
 </rss>
