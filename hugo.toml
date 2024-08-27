@@ -3,6 +3,10 @@ languageCode = 'en-us'
 title = 'Woojae'
 theme = 'ananke'
 
+[services]
+  [services.googleAnalytics]
+    ID = 'G-3SSKRJFJGB'
+
 [menu]
   [[menu.main]]
     identifier = "posts"
