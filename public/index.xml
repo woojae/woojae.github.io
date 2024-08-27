@@ -6,8 +6,15 @@
     <description>Recent content on Woojae</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Aug 2024 20:10:06 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 27 Aug 2024 09:40:33 +0900</lastBuildDate>
     <atom:link href="https://woojae.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Use Terraform Dynamics</title>
+      <link>https://woojae.github.io/posts/terraform-dynamic/</link>
+      <pubDate>Tue, 27 Aug 2024 09:40:33 +0900</pubDate>
+      <guid>https://woojae.github.io/posts/terraform-dynamic/</guid>
+      <description>How to Use Terraform Dynamics Today, we&amp;rsquo;re focusing on a particularly powerful feature: Terraform Dynamics. This tool is essential for writing more efficient and maintainable code by helping you adhere to the DRY (Don&amp;rsquo;t Repeat Yourself) principle.&#xA;Why You Should Care About Terraform Dynamics Let’s get one thing straight: if you enjoy writing the same block of code over and over again, this post isn’t for you. Terraform dynamics is for the lazy (read: efficient) engineers who believe that copy-pasting is a crime punishable by endless debugging sessions.</description>
+    </item>
     <item>
       <title>My First Post</title>
       <link>https://woojae.github.io/posts/my-first-post/</link>
