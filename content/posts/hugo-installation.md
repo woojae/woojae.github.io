@@ -6,13 +6,13 @@ draft = false
 
 I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul. Even if Hugo one day bites the dust or stops getting updates, I’ll still have my trusty Markdown and HTML files, which means my site can live on forever.
 
-This approach is better than getting tangled up in a complex framework or relying on a platform that needs a database. A database is overkill, for most static webpages. Why burden myself with a heavy framework when a lightweight, static site generator like Hugo nails it perfectly? Keep it simple, and you’ll thank yourself later.
-
 I love statically rendered sites, it brings back memories of the good old days when you’d just FTP your files up to a server, and boom, you had a website. No fuss, no complicated setups, just pure simplicity. It’s like a throwback to when the web was all about getting content out there without jumping through hoops. Hugo taps into that same vibe, where you can focus on what really matters without being bogged down by unnecessary complexities. It’s refreshing to go back to basics and know that your site will be rock-solid and future-proof, just like the old days.
+
+Most webpages don’t need the added complexity of managing a database, web server, load balancer, VPCs, security groups, and the like. Keeping it simple is often the best choice. 
 
 Here’s a step-by-step explanation of how I created my website using Hugo and deployed it to GitHub Pages, along with the process for updating the DNS settings on GoDaddy to point to the new website. The full source code for the website can be found on [here](https://github.com/woojae/woojae.github.io).
 
-All these steps still seem like a bit much for a simple webpage. I can't wait until AI can handle all of this for me. However, I feel like all these tedious "glue" steps might be too complex for AI to implement just yet. On the bright side, the AI was incredibly helpful in creating this document.
+All these steps still seem like a bit much for a simple webpage. I can't wait until AI can handle all of this for me. However, I feel like all these tedious "glue" steps might be too complex for AI to implement just yet. On the bright side, the AI was incredibly helpful in writing this document.
 
 ### Step 1: Install Hugo
 1. **Download Hugo**: First, I went to the [official Hugo website](https://gohugo.io/getting-started/installing) and followed the instructions to install Hugo. Depending on your operating system, the installation might differ slightly. I used the command line to install it.
