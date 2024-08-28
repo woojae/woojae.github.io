@@ -15,8 +15,10 @@ Here’s a step-by-step explanation of how I created my website using Hugo and d
 All these steps still seem like a bit much for a simple webpage. I can't wait until AI can handle all of this for me. However, I feel like all these tedious "glue" steps might be too complex for AI to implement just yet. On the bright side, the AI was incredibly helpful in writing this document.
 
 ### Step 1: Install Hugo
-1. **Download Hugo**: First, I went to the [official Hugo website](https://gohugo.io/getting-started/installing) and followed the instructions to install Hugo. Depending on your operating system, the installation might differ slightly. I used the command line to install it.
-   - On Mac: `brew install hugo`
+1. **Download Hugo**: First, I went to the [official Hugo website](https://gohugo.io/getting-started/installing) and followed the instructions to install Hugo. Depending on your operating system, the installation might differ slightly. I used the command line to install it on my mac.
+   ```
+   brew install hugo
+   ```
 
 2. **Verify Installation**: After installation, I verified Hugo was set up by running:
    ```
@@ -27,6 +29,11 @@ All these steps still seem like a bit much for a simple webpage. I can't wait un
 1. **Create a New Site**: I created a new Hugo project by running:
    ```
    hugo new site my-website
+   cd my-website
+   git init
+   git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+   echo "theme = 'ananke'" >> hugo.toml
+   hugo server
    ```
    This generated the basic directory structure.
 

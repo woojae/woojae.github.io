@@ -48,7 +48,7 @@
   <meta itemprop="description" content="I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul.">
   <meta itemprop="datePublished" content="2024-08-28T11:00:33+09:00">
   <meta itemprop="dateModified" content="2024-08-28T11:00:33+09:00">
-  <meta itemprop="wordCount" content="1327">
+  <meta itemprop="wordCount" content="1345">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Hugo Installation">
   <meta name="twitter:description" content="I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul.">
@@ -142,11 +142,9 @@
 <h3 id="step-1-install-hugo">Step 1: Install Hugo</h3>
 <ol>
 <li>
-<p><strong>Download Hugo</strong>: First, I went to the <a href="https://gohugo.io/getting-started/installing">official Hugo website</a> and followed the instructions to install Hugo. Depending on your operating system, the installation might differ slightly. I used the command line to install it.</p>
-<ul>
-<li>On Mac: <code>brew install hugo</code></li>
-</ul>
-</li>
+<p><strong>Download Hugo</strong>: First, I went to the <a href="https://gohugo.io/getting-started/installing">official Hugo website</a> and followed the instructions to install Hugo. Depending on your operating system, the installation might differ slightly. I used the command line to install it on my mac.</p>
+<pre tabindex="0"><code>brew install hugo
+</code></pre></li>
 <li>
 <p><strong>Verify Installation</strong>: After installation, I verified Hugo was set up by running:</p>
 <pre tabindex="0"><code>hugo version
@@ -157,6 +155,11 @@
 <li>
 <p><strong>Create a New Site</strong>: I created a new Hugo project by running:</p>
 <pre tabindex="0"><code>hugo new site my-website
+cd my-website
+git init
+git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+echo &#34;theme = &#39;ananke&#39;&#34; &gt;&gt; hugo.toml
+hugo server
 </code></pre><p>This generated the basic directory structure.</p>
 </li>
 <li>
