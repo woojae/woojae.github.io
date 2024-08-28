@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
     <title>Hugo Installation | Woojae</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul.">
-    <meta name="generator" content="Hugo 0.132.1">
+    <meta name="generator" content="Hugo 0.133.1">
     
     
     
@@ -31,10 +31,10 @@
     
 
     
-      <link rel="canonical" href="http://localhost:1313/posts/hugo-installation/">
+      <link rel="canonical" href="https://woojae.github.io/posts/hugo-installation/">
     
 
-    <meta property="og:url" content="http://localhost:1313/posts/hugo-installation/">
+    <meta property="og:url" content="https://woojae.github.io/posts/hugo-installation/">
   <meta property="og:site_name" content="Woojae">
   <meta property="og:title" content="Hugo Installation">
   <meta property="og:description" content="I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul.">
@@ -48,7 +48,7 @@
   <meta itemprop="description" content="I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul.">
   <meta itemprop="datePublished" content="2024-08-28T11:00:33+09:00">
   <meta itemprop="dateModified" content="2024-08-28T11:00:33+09:00">
-  <meta itemprop="wordCount" content="1344">
+  <meta itemprop="wordCount" content="1359">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Hugo Installation">
   <meta name="twitter:description" content="I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul.">
@@ -137,14 +137,14 @@
     <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul. Even if Hugo one day bites the dust or stops getting updates, I’ll still have my trusty Markdown and HTML files, which means my site can live on forever.</p>
 <p>This approach is better than getting tangled up in a complex framework or relying on a platform that needs a database. For a straightforward website like mine, a database is overkill—adding unnecessary layers of complication. Why burden myself with a heavy framework when a lightweight, static site generator like Hugo nails it perfectly? Keep it simple, and you’ll thank yourself later.</p>
 <p>I love statically rendered sites, it brings back memories of the good old days when you’d just FTP your files up to a server, and boom, you had a website. No fuss, no complicated setups, just pure simplicity. It’s like a throwback to when the web was all about getting content out there without jumping through hoops. Hugo taps into that same vibe, where you can focus on what really matters without being bogged down by unnecessary complexities. It’s refreshing to go back to basics and know that your site will be rock-solid and future-proof, just like the old days.</p>
-<p>Here’s a step-by-step explanation of how I created my website using Hugo and deployed it to GitHub Pages, along with the process for updating the DNS settings on GoDaddy to point to the new website.</p>
+<p>Here’s a step-by-step explanation of how I created my website using Hugo and deployed it to GitHub Pages, along with the process for updating the DNS settings on GoDaddy to point to the new website. The full source code for the website can be found on <a href="https://github.com/woojae/woojae.github.io">here</a>.</p>
+<p>All these steps still seem like a bit much for a simple webpage. I can&rsquo;t wait until AI can handle all of this for me. However, I feel like all these tedious &ldquo;glue&rdquo; steps might be too complex for AI to implement just yet. On the bright side, the AI was incredibly helpful in creating this document.</p>
 <h3 id="step-1-install-hugo">Step 1: Install Hugo</h3>
 <ol>
 <li>
 <p><strong>Download Hugo</strong>: First, I went to the <a href="https://gohugo.io/getting-started/installing">official Hugo website</a> and followed the instructions to install Hugo. Depending on your operating system, the installation might differ slightly. I used the command line to install it.</p>
 <ul>
 <li>On Mac: <code>brew install hugo</code></li>
-<li>On Windows: Use the Windows installer or install via package managers like <code>chocolatey</code>.</li>
 </ul>
 </li>
 <li>
@@ -393,7 +393,6 @@ git push
 </ol>
 <hr>
 <p>By following these steps, your Hugo website will be automatically built and deployed to GitHub Pages using GitHub Actions, and your custom domain will be properly configured using GoDaddy&rsquo;s DNS settings. This setup not only streamlines the deployment process but also ensures your site is always up to date with the latest changes.</p>
-<p>Honestly all these steps seems like its too hard. But I have not found anything easier, can&rsquo;t wait till the AI can do all this for me. The funny thing is the AI was great at helping me create this document.</p>
 <ul class="pa0">
   
 </ul>
@@ -415,7 +414,7 @@ git push
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://woojae.github.io/" >
     &copy;  Woojae 2024 
   </a>
     <div>

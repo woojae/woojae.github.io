@@ -10,12 +10,13 @@ This approach is better than getting tangled up in a complex framework or relyin
 
 I love statically rendered sites, it brings back memories of the good old days when you’d just FTP your files up to a server, and boom, you had a website. No fuss, no complicated setups, just pure simplicity. It’s like a throwback to when the web was all about getting content out there without jumping through hoops. Hugo taps into that same vibe, where you can focus on what really matters without being bogged down by unnecessary complexities. It’s refreshing to go back to basics and know that your site will be rock-solid and future-proof, just like the old days.
 
-Here’s a step-by-step explanation of how I created my website using Hugo and deployed it to GitHub Pages, along with the process for updating the DNS settings on GoDaddy to point to the new website.
+Here’s a step-by-step explanation of how I created my website using Hugo and deployed it to GitHub Pages, along with the process for updating the DNS settings on GoDaddy to point to the new website. The full source code for the website can be found on [here](https://github.com/woojae/woojae.github.io).
+
+All these steps still seem like a bit much for a simple webpage. I can't wait until AI can handle all of this for me. However, I feel like all these tedious "glue" steps might be too complex for AI to implement just yet. On the bright side, the AI was incredibly helpful in creating this document.
 
 ### Step 1: Install Hugo
 1. **Download Hugo**: First, I went to the [official Hugo website](https://gohugo.io/getting-started/installing) and followed the instructions to install Hugo. Depending on your operating system, the installation might differ slightly. I used the command line to install it.
    - On Mac: `brew install hugo`
-   - On Windows: Use the Windows installer or install via package managers like `chocolatey`.
 
 2. **Verify Installation**: After installation, I verified Hugo was set up by running:
    ```
@@ -217,4 +218,3 @@ This command created the fully rendered website in the `public/` folder, which w
 
 By following these steps, your Hugo website will be automatically built and deployed to GitHub Pages using GitHub Actions, and your custom domain will be properly configured using GoDaddy's DNS settings. This setup not only streamlines the deployment process but also ensures your site is always up to date with the latest changes.
 
-Honestly all these steps seems like its too hard. But I have not found anything easier, can't wait till the AI can do all this for me. The funny thing is the AI was great at helping me create this document. 
