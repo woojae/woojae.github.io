@@ -6,8 +6,15 @@
     <description>Recent content on Woojae</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Aug 2024 11:00:33 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 29 Aug 2024 09:24:11 +0900</lastBuildDate>
     <atom:link href="https://woojae.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fix Posture</title>
+      <link>https://woojae.github.io/posts/fix-posture/</link>
+      <pubDate>Thu, 29 Aug 2024 09:24:11 +0900</pubDate>
+      <guid>https://woojae.github.io/posts/fix-posture/</guid>
+      <description>During my time in Korea, one of my main goals is to work on improving my posture. I&amp;rsquo;ve struggled with poor posture for most of my life, which has led to an unattractive hunchback and constant back pain. Now that I have some time off, I&amp;rsquo;m determined to correct it.&#xA;I&amp;rsquo;ve done some research using ChatGPT and YouTube, and I believe I have the tools to achieve better posture.&#xA;My specific goals are to be able to do 10 pull-ups, 50 sit-ups, and maintain a straight back.</description>
+    </item>
     <item>
       <title>Hugo Installation</title>
       <link>https://woojae.github.io/posts/hugo-installation/</link>
