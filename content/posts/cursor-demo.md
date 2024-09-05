@@ -6,9 +6,11 @@ draft = false
 
 The new popular tool in town is Cursor.ai. Both Paul Graham and Andrej Karpathy tweeted about it, so I decided to see what the hype was all about. As an infrastructure engineer, I tested it by creating infrastructure using Terraform on AWS.
 
-I was mostly impressed by cursor, but not completely blown away. It mostly feels like UI improvments to github copilot which are significant and useful.
+I found Cursor to be quite impressive, though not entirely mind-blowing. It feels like a set of significant user interface improvements to GitHub Copilot. These enhancements are impactful and highly useful. For example, I was able to make changes to Terraform backend, and it automatically applied those backend modifications across all the related Terraform resources.
 
-## Let's use AI to create an S3 bucket to store our terraform state file
+## Let's use cursor to create an S3 bucket to store our terraform state file
+
+**prompt**
 
 Create a s3 bucket store my terraform state, ensure the bucket is secure from outside world..  
 name the bucket cursor-tf-state
@@ -81,7 +83,7 @@ resource "aws_dynamodb_table" "terraform_locks" {
 
 That's pretty good stuff in my opinion.  This is working code produced by the AI.  This terraform code is not that complicated and probably take about 30 minutes to write the code myself.  The AI was able the complete thing in seconds.  That's a 1000x improvement compared to me.
 
-Another key feature of Cursor is the CMD+L shortcut, which lets you ask the AI questions. For example, I asked it about the *attributes* used in DynamoDB. The answer was pretty good.
+A key highlight of Cursor is the CMD+L shortcut, which lets you quickly ask the AI questions. For example, I used it to ask about DynamoDB attributes, and the answer was quite reliable. Typically, I’d Google this and end up getting distracted, but with the answers directly in the Cursor UI, there's no opportunity to lose focus.
 
 **Cursor's Response**
 
@@ -103,7 +105,8 @@ This setup ensures that only one operation can modify the Terraform state at a t
 
 Let's ask cursor to create another s3 bucket.
 
-Prompt:
+**Prompt**
+
 - create a new s3 bucket name woojae-poop
 - use the s3 bucket cursor-tf-state store the terraform state.
 - ensure the backend is locking using dynamodb table created in the tfstate directory
@@ -161,6 +164,8 @@ resource "aws_s3_bucket_versioning" "woojae_poop" {
 
 ```
 
-Maybe it was my prompt, but this result was a bit off. I didn’t want to create a new DynamoDB table, and the provider region was incorrect. Since I've done this type of work a lot, I could spot the mistakes easily, but a junior engineer might run this without noticing, creating a mess for a senior engineer to clean up. Fixing Terraform issues can be extremely difficult. The `terraform import` syntax is awkward and tricky to execute, especially when importing a resource created with a complex modules. Even worse, you could accidentally delete a resource.
+Maybe it was my prompt, but this result was a bit off. I didn’t want to create a new DynamoDB table, and the provider region was incorrect. Since I've done this type of work a lot, I could spot the mistakes easily, but a junior engineer or developer might run this without noticing, creating a mess for me to clean up. Fixing Terraform issues can be extremely difficult. The `terraform import` syntax is awkward and tricky to execute, especially when importing a resource created with a complex modules. Even worse, you could accidentally delete a resource.
 
-Cursor feels like an upgraded version of my current workflow, which combines ChatGPT and GitHub Copilot. The UI improvements reduce the need for copying and pasting, and I believe this technology will keep improving in the future. I've been using AI daily for the past two years, and while it's gotten slightly better, it still feels like we're some time away from making infrastructure engineers completely unnecessary. AI is great at handling basic coding and syntax, but infrastructure engineering involves complex decisions, like determining subnet size, configuring node groups, encrypting S3 buckets, and setting proper permissions for Terraform. These are areas where AI still struggles to provide reliable solutions.
+Cursor feels like an upgraded version of my current workflow, which combines ChatGPT and GitHub Copilot. The UI improvements reduce the need for copying and pasting, and this technology will keep improving in the future. I've been using AI daily for the past two years, and while it's gotten better, it still feels like we're some time away from making infrastructure engineers completely unnecessary. AI is great at handling basic coding and syntax, but infrastructure engineering involves complex decisions, like determining subnet size, configuring node groups, encrypting S3 buckets, and setting proper permissions for Terraform. 
+
+The "glue" code that infrastructure engineers often manage will likely be the hardest for AI to automate. This code typically bridges gaps between engineering teams, resolves subtle, unintended interactions between different software systems, and accounts for a series of undocumented manual steps performed by some random engineer five years ago.

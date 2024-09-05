@@ -13,7 +13,7 @@
       <link>https://woojae.github.io/posts/cursor-demo/</link>
       <pubDate>Thu, 05 Sep 2024 10:22:22 +0900</pubDate>
       <guid>https://woojae.github.io/posts/cursor-demo/</guid>
-      <description>The new popular tool in town is Cursor.ai. Both Paul Graham and Andrej Karpathy tweeted about it, so I decided to see what the hype was all about. As an infrastructure engineer, I tested it by creating infrastructure using Terraform on AWS.&#xA;I was mostly impressed by cursor, but not completely blown away. It mostly feels like UI improvments to github copilot which are significant and useful.&#xA;Let&amp;rsquo;s use AI to create an S3 bucket to store our terraform state file Create a s3 bucket store my terraform state, ensure the bucket is secure from outside world.</description>
+      <description>The new popular tool in town is Cursor.ai. Both Paul Graham and Andrej Karpathy tweeted about it, so I decided to see what the hype was all about. As an infrastructure engineer, I tested it by creating infrastructure using Terraform on AWS.&#xA;I found Cursor to be quite impressive, though not entirely mind-blowing. It feels like a set of significant user interface improvements to GitHub Copilot. These enhancements are impactful and highly useful.</description>
     </item>
     <item>
       <title>Fix Posture</title>
