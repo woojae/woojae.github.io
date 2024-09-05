@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Cursor Demo | Woojae</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="The new popular tool in town is Cursor.ai. Both Paul Graham and Andrej Karpathy tweeted about it, so I decided to see what the hype was all about. As an infrastructure engineer, I tested it by creating infrastructure using Terraform on AWS.
+I was mostly impressed by cursor, but not completely blown away. It mostly feels like UI improvments to github copilot which are significant and useful.
+Let&rsquo;s use AI to create an S3 bucket to store our terraform state file Create a s3 bucket store my terraform state, ensure the bucket is secure from outside world.">
+    <meta name="generator" content="Hugo 0.133.1">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://woojae.github.io/posts/cursor-demo/">
+    
+
+    <meta property="og:url" content="https://woojae.github.io/posts/cursor-demo/">
+  <meta property="og:site_name" content="Woojae">
+  <meta property="og:title" content="Cursor Demo">
+  <meta property="og:description" content="The new popular tool in town is Cursor.ai. Both Paul Graham and Andrej Karpathy tweeted about it, so I decided to see what the hype was all about. As an infrastructure engineer, I tested it by creating infrastructure using Terraform on AWS.
+I was mostly impressed by cursor, but not completely blown away. It mostly feels like UI improvments to github copilot which are significant and useful.
+Let’s use AI to create an S3 bucket to store our terraform state file Create a s3 bucket store my terraform state, ensure the bucket is secure from outside world.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-09-05T10:22:22+09:00">
+    <meta property="article:modified_time" content="2024-09-05T10:22:22+09:00">
+
+  <meta itemprop="name" content="Cursor Demo">
+  <meta itemprop="description" content="The new popular tool in town is Cursor.ai. Both Paul Graham and Andrej Karpathy tweeted about it, so I decided to see what the hype was all about. As an infrastructure engineer, I tested it by creating infrastructure using Terraform on AWS.
+I was mostly impressed by cursor, but not completely blown away. It mostly feels like UI improvments to github copilot which are significant and useful.
+Let’s use AI to create an S3 bucket to store our terraform state file Create a s3 bucket store my terraform state, ensure the bucket is secure from outside world.">
+  <meta itemprop="datePublished" content="2024-09-05T10:22:22+09:00">
+  <meta itemprop="dateModified" content="2024-09-05T10:22:22+09:00">
+  <meta itemprop="wordCount" content="965">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Cursor Demo">
+  <meta name="twitter:description" content="The new popular tool in town is Cursor.ai. Both Paul Graham and Andrej Karpathy tweeted about it, so I decided to see what the hype was all about. As an infrastructure engineer, I tested it by creating infrastructure using Terraform on AWS.
+I was mostly impressed by cursor, but not completely blown away. It mostly feels like UI improvments to github copilot which are significant and useful.
+Let’s use AI to create an S3 bucket to store our terraform state file Create a s3 bucket store my terraform state, ensure the bucket is secure from outside world.">
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Woojae
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Post page">
+              Post
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Cursor Demo</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-09-05T10:22:22+09:00">September 5, 2024</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>The new popular tool in town is Cursor.ai. Both Paul Graham and Andrej Karpathy tweeted about it, so I decided to see what the hype was all about. As an infrastructure engineer, I tested it by creating infrastructure using Terraform on AWS.</p>
+<p>I was mostly impressed by cursor, but not completely blown away. It mostly feels like UI improvments to github copilot which are significant and useful.</p>
+<h2 id="lets-use-ai-to-create-an-s3-bucket-to-store-our-terraform-state-file">Let&rsquo;s use AI to create an S3 bucket to store our terraform state file</h2>
+<p>Create a s3 bucket store my terraform state, ensure the bucket is secure from outside world..<br>
+name the bucket cursor-tf-state</p>
+<p>Also create a dynamodb to store the lockID.</p>
+<p><strong>Cursor&rsquo;s Response</strong></p>
+<p>Certainly! I&rsquo;ll create a Terraform configuration to set up an S3 bucket for storing your Terraform state and a DynamoDB table for state locking. Here&rsquo;s the code to accomplish this securely:
+This configuration does the following:</p>
+<ol>
+<li>Creates an S3 bucket named &ldquo;cursor-tf-state&rdquo; to store your Terraform state.</li>
+<li>Enables versioning on the S3 bucket to keep a history of your state files.</li>
+<li>Configures server-side encryption for the S3 bucket using AES256.</li>
+<li>Blocks all public access to the S3 bucket to ensure it&rsquo;s secure from the outside world.</li>
+<li>Creates a DynamoDB table named &ldquo;cursor-tf-state-locks&rdquo; for storing lock information.</li>
+<li>To use this state storage in your other Terraform configurations, you&rsquo;ll need to add a backend configuration. Here&rsquo;s an example of how to do that.</li>
+</ol>
+<pre tabindex="0"><code>provider &#34;aws&#34; {
+  region = &#34;us-west-1&#34;  # Replace with your preferred region
+}
+
+resource &#34;aws_s3_bucket&#34; &#34;terraform_state&#34; {
+  bucket = &#34;cursor-tf-state&#34;
+
+  # Prevent accidental deletion of this S3 bucket
+  lifecycle {
+    prevent_destroy = true
+  }
+}
+
+resource &#34;aws_s3_bucket_versioning&#34; &#34;enabled&#34; {
+  bucket = aws_s3_bucket.terraform_state.id
+  versioning_configuration {
+    status = &#34;Enabled&#34;
+  }
+}
+
+resource &#34;aws_s3_bucket_server_side_encryption_configuration&#34; &#34;default&#34; {
+  bucket = aws_s3_bucket.terraform_state.id
+
+  rule {
+    apply_server_side_encryption_by_default {
+      sse_algorithm = &#34;AES256&#34;
+    }
+  }
+}
+
+resource &#34;aws_s3_bucket_public_access_block&#34; &#34;public_access&#34; {
+  bucket                  = aws_s3_bucket.terraform_state.id
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
+}
+
+resource &#34;aws_dynamodb_table&#34; &#34;terraform_locks&#34; {
+  name         = &#34;cursor-tf-state-locks&#34;
+  billing_mode = &#34;PAY_PER_REQUEST&#34;
+  hash_key     = &#34;LockID&#34;
+
+  attribute {
+    name = &#34;LockID&#34;
+    type = &#34;S&#34;
+  }
+}
+</code></pre><p>That&rsquo;s pretty good stuff in my opinion.  This is working code produced by the AI.  This terraform code is not that complicated and probably take about 30 minutes to write the code myself.  The AI was able the complete thing in seconds.  That&rsquo;s a 1000x improvement compared to me.</p>
+<p>Another key feature of Cursor is the CMD+L shortcut, which lets you ask the AI questions. For example, I asked it about the <em>attributes</em> used in DynamoDB. The answer was pretty good.</p>
+<p><strong>Cursor&rsquo;s Response</strong></p>
+<p>The attributes you&rsquo;re referring to are part of the DynamoDB table definition in Terraform. Specifically, they are defining the schema for the table that will be used for Terraform state locking. Let&rsquo;s break it down:</p>
+<ol>
+<li><code>name = &quot;LockID&quot;</code>: This defines the name of the attribute.</li>
+<li><code>type = &quot;S&quot;</code>: This specifies the data type of the attribute. &ldquo;S&rdquo; stands for String.</li>
+</ol>
+<p>In the context of Terraform state locking:</p>
+<ul>
+<li>The DynamoDB table is used to implement locking when multiple users or processes are trying to modify the same Terraform state.</li>
+<li>The &ldquo;LockID&rdquo; attribute serves as the primary key (hash key) for the DynamoDB table.</li>
+<li>When Terraform acquires a lock, it writes an item to this table with a LockID that&rsquo;s unique to the state file being modified.</li>
+<li>The String type is used because the LockID is typically a string value.</li>
+</ul>
+<p>This setup ensures that only one operation can modify the Terraform state at a time, preventing conflicts and race conditions when multiple users are working with the same infrastructure.</p>
+<h2 id="now-that-we-have-a-state-file-lets-do-something-with-it">Now that we have a state file. Let&rsquo;s do something with it</h2>
+<p>Let&rsquo;s ask cursor to create another s3 bucket.</p>
+<p>Prompt:</p>
+<ul>
+<li>create a new s3 bucket name woojae-poop</li>
+<li>use the s3 bucket cursor-tf-state store the terraform state.</li>
+<li>ensure the backend is locking using dynamodb table created in the tfstate directory</li>
+<li>make sure this bucket is not exposed to the outside world.</li>
+<li>enable encryption.</li>
+<li>disable versioning.</li>
+</ul>
+<p><strong>Cursor&rsquo;s Reponse</strong></p>
+<pre tabindex="0"><code>terraform {
+  backend &#34;s3&#34; {
+    bucket         = &#34;cursor-tf-state&#34;
+    key            = &#34;woojae-poop/terraform.tfstate&#34;
+    region         = &#34;us-east-1&#34;  # Change this to your preferred region
+    encrypt        = true
+    dynamodb_table = &#34;terraform-state-lock&#34;
+  }
+}
+
+provider &#34;aws&#34; {
+  region = &#34;us-east-1&#34;  # Change this to your preferred region
+}
+
+resource &#34;aws_s3_bucket&#34; &#34;woojae_poop&#34; {
+  bucket = &#34;woojae-poop&#34;
+}
+
+resource &#34;aws_s3_bucket_public_access_block&#34; &#34;woojae_poop&#34; {
+  bucket = aws_s3_bucket.woojae_poop.id
+
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
+}
+
+resource &#34;aws_s3_bucket_server_side_encryption_configuration&#34; &#34;woojae_poop&#34; {
+  bucket = aws_s3_bucket.woojae_poop.id
+
+  rule {
+    apply_server_side_encryption_by_default {
+      sse_algorithm = &#34;AES256&#34;
+    }
+  }
+}
+
+resource &#34;aws_s3_bucket_versioning&#34; &#34;woojae_poop&#34; {
+  bucket = aws_s3_bucket.woojae_poop.id
+  versioning_configuration {
+    status = &#34;Disabled&#34;
+  }
+}
+</code></pre><p>Maybe it was my prompt, but this result was a bit off. I didn’t want to create a new DynamoDB table, and the provider region was incorrect. Since I&rsquo;ve done this type of work a lot, I could spot the mistakes easily, but a junior engineer might run this without noticing, creating a mess for a senior engineer to clean up. Fixing Terraform issues can be extremely difficult. The <code>terraform import</code> syntax is awkward and tricky to execute, especially when importing a resource created with a complex modules. Even worse, you could accidentally delete a resource.</p>
+<p>Cursor feels like an upgraded version of my current workflow, which combines ChatGPT and GitHub Copilot. The UI improvements reduce the need for copying and pasting, and I believe this technology will keep improving in the future. I&rsquo;ve been using AI daily for the past two years, and while it&rsquo;s gotten slightly better, it still feels like we&rsquo;re some time away from making infrastructure engineers completely unnecessary. AI is great at handling basic coding and syntax, but infrastructure engineering involves complex decisions, like determining subnet size, configuring node groups, encrypting S3 buckets, and setting proper permissions for Terraform. These are areas where AI still struggles to provide reliable solutions.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://woojae.github.io/" >
+    &copy;  Woojae 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

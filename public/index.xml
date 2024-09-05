@@ -2,38 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Woojae</title>
-    <link>http://localhost:1313/</link>
+    <link>https://woojae.github.io/</link>
     <description>Recent content on Woojae</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Aug 2024 09:24:11 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Sep 2024 10:22:22 +0900</lastBuildDate>
+    <atom:link href="https://woojae.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cursor Demo</title>
+      <link>https://woojae.github.io/posts/cursor-demo/</link>
+      <pubDate>Thu, 05 Sep 2024 10:22:22 +0900</pubDate>
+      <guid>https://woojae.github.io/posts/cursor-demo/</guid>
+      <description>The new popular tool in town is Cursor.ai. Both Paul Graham and Andrej Karpathy tweeted about it, so I decided to see what the hype was all about. As an infrastructure engineer, I tested it by creating infrastructure using Terraform on AWS.&#xA;I was mostly impressed by cursor, but not completely blown away. It mostly feels like UI improvments to github copilot which are significant and useful.&#xA;Let&amp;rsquo;s use AI to create an S3 bucket to store our terraform state file Create a s3 bucket store my terraform state, ensure the bucket is secure from outside world.</description>
+    </item>
     <item>
       <title>Fix Posture</title>
-      <link>http://localhost:1313/posts/fix-posture/</link>
+      <link>https://woojae.github.io/posts/fix-posture/</link>
       <pubDate>Thu, 29 Aug 2024 09:24:11 +0900</pubDate>
-      <guid>http://localhost:1313/posts/fix-posture/</guid>
+      <guid>https://woojae.github.io/posts/fix-posture/</guid>
       <description>During my time in Korea, one of my main goals is to work on improving my posture. I&amp;rsquo;ve struggled with poor posture for most of my life, which has led to an unattractive hunchback and constant back pain. Now that I have some time off, I&amp;rsquo;m determined to correct it.&#xA;I&amp;rsquo;ve done some research using ChatGPT and YouTube, and this is what I came up with. Let&amp;rsquo;s see if works.</description>
     </item>
     <item>
       <title>Hugo Installation</title>
-      <link>http://localhost:1313/posts/hugo-installation/</link>
+      <link>https://woojae.github.io/posts/hugo-installation/</link>
       <pubDate>Wed, 28 Aug 2024 11:00:33 +0900</pubDate>
-      <guid>http://localhost:1313/posts/hugo-installation/</guid>
+      <guid>https://woojae.github.io/posts/hugo-installation/</guid>
       <description>I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul.</description>
     </item>
     <item>
       <title>How to Use Terraform Dynamics</title>
-      <link>http://localhost:1313/posts/terraform-dynamic/</link>
+      <link>https://woojae.github.io/posts/terraform-dynamic/</link>
       <pubDate>Tue, 27 Aug 2024 09:40:33 +0900</pubDate>
-      <guid>http://localhost:1313/posts/terraform-dynamic/</guid>
+      <guid>https://woojae.github.io/posts/terraform-dynamic/</guid>
       <description>How to Use Terraform Dynamics Today, we&amp;rsquo;re focusing on a particularly powerful feature: Terraform Dynamics. This tool is essential for writing more efficient and maintainable code by helping you adhere to the DRY (Don&amp;rsquo;t Repeat Yourself) principle.&#xA;Why You Should Care About Terraform Dynamics Let’s get one thing straight: if you enjoy writing the same block of code over and over again, this post isn’t for you. Terraform dynamics is for the lazy (read: efficient) engineers who believe that copy-pasting is a crime punishable by endless debugging sessions.</description>
     </item>
     <item>
       <title>My First Post</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
+      <link>https://woojae.github.io/posts/my-first-post/</link>
       <pubDate>Mon, 26 Aug 2024 20:10:06 +0900</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <guid>https://woojae.github.io/posts/my-first-post/</guid>
       <description>Introduction I&amp;rsquo;ve finally decided to retire my old Tumblr page. It&amp;rsquo;s honestly surprising that it’s still functioning after a decade of neglect, but the time has come to move on. I&amp;rsquo;m transitioning to Hugo, a static site generator. I chose Hugo for my new website because it allows me to host it for free, and a static site offers the scalability and longevity I’m looking for. More complex setups eventually break down as frameworks become obsolete.</description>
     </item>
   </channel>
