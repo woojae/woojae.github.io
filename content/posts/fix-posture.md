@@ -5,20 +5,15 @@ draft = false
 +++
 During my time in Korea, one of my main goals is to work on improving my posture. I've struggled with poor posture for most of my life, which has led to an unattractive hunchback and constant back pain. Now that I have some time off, I'm determined to correct it.
 
-I've done some research using ChatGPT and YouTube, and I believe I have the tools to achieve better posture.
+I've done some research using ChatGPT and YouTube, and this is what I came up with.  Let's see if works.
 
-My specific goals are to be able to do 10 pull-ups, 50 sit-ups, and maintain a straight back.
+My specific goals are to be able to do 10 pull-ups, 50 push-ups, and maintain a straight back.
 
 ### **Posture Correction Checklist**
 
 #### **Daily Stretch Tasks**
 [Mandy Morrison](https://www.youtube.com/watch?v=BPlCatqZRPI) back stretch video. I like her because she doesn't talk.
 - [ ] **Posture Awareness**: Setup an iOS reminder every hour.
-- [ ] **Chest Stretch**: Perform the chest stretch for 30 seconds per side.
-- [ ] **Thoracic Spine Extension**: Perform for 20-30 seconds.
-- [ ] **Cat-Cow Stretch**: Perform for 1-2 minutes.
-- [ ] **Diaphragmatic Breathing**: Practice deep breathing for 5 minutes.
-- [ ] **Core Engagement**: Practice bracing your core during daily activities.
 
 #### **Strengthening Exercises (3 times a week)**
 - [ ] **Face Pulls**: 3 sets of 12-15 reps.
