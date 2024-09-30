@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Proxy Vm | Woojae</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="I’ve been living in Korea since August. The experience has been fascinating on many levels, though not without its frustrations. One unexpected frustration is the way some websites don&rsquo;t work here. Website owners block access to users from Asian countries. This is usually to filter out bots and scammers, as well as licensing rights that are geographically bounded. I was not able to log into starbucks.com to purchase a gift card because of this.">
+    <meta name="generator" content="Hugo 0.133.1">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://woojae.github.io/posts/proxy-vm/">
+    
+
+    <meta property="og:url" content="https://woojae.github.io/posts/proxy-vm/">
+  <meta property="og:site_name" content="Woojae">
+  <meta property="og:title" content="Proxy Vm">
+  <meta property="og:description" content="I’ve been living in Korea since August. The experience has been fascinating on many levels, though not without its frustrations. One unexpected frustration is the way some websites don’t work here. Website owners block access to users from Asian countries. This is usually to filter out bots and scammers, as well as licensing rights that are geographically bounded. I was not able to log into starbucks.com to purchase a gift card because of this.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-09-30T15:38:18+09:00">
+    <meta property="article:modified_time" content="2024-09-30T15:38:18+09:00">
+
+  <meta itemprop="name" content="Proxy Vm">
+  <meta itemprop="description" content="I’ve been living in Korea since August. The experience has been fascinating on many levels, though not without its frustrations. One unexpected frustration is the way some websites don’t work here. Website owners block access to users from Asian countries. This is usually to filter out bots and scammers, as well as licensing rights that are geographically bounded. I was not able to log into starbucks.com to purchase a gift card because of this.">
+  <meta itemprop="datePublished" content="2024-09-30T15:38:18+09:00">
+  <meta itemprop="dateModified" content="2024-09-30T15:38:18+09:00">
+  <meta itemprop="wordCount" content="700">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Proxy Vm">
+  <meta name="twitter:description" content="I’ve been living in Korea since August. The experience has been fascinating on many levels, though not without its frustrations. One unexpected frustration is the way some websites don’t work here. Website owners block access to users from Asian countries. This is usually to filter out bots and scammers, as well as licensing rights that are geographically bounded. I was not able to log into starbucks.com to purchase a gift card because of this.">
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Woojae
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Post page">
+              Post
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Proxy Vm</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-09-30T15:38:18+09:00">September 30, 2024</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>I’ve been living in Korea since August. The experience has been fascinating on many levels, though not without its frustrations. One unexpected frustration is the way some websites don&rsquo;t work here. Website owners block access to users from Asian countries. This is usually to filter out bots and scammers, as well as licensing rights that are geographically bounded. I was not able to log into starbucks.com to purchase a gift card because of this. Starbucks in Korea is partially owned by the Shinsegae corporation in Korea, so whenever I tried to log into starbucks.com it simply would not work.</p>
+<p>Another thing I was not able to do was watch PBS in Korea. I’ve had an abnormal love of PBS since Jr. High.  I used to record episodes of Frontline, Nova, and American Masters on VHS tapes. I even donated money to PBS. But in Korea I can’t watch Nova or Frontline.</p>
+<p>Since I’m a “devops” engineer I used my Devops wizardry to watch Frontline. The simpler solution would be to purchase a VPN service like (Nord, or Express), but that’s $10 dollars a month, to watch a single episode of Frontline, or buy a starbucks gift card. Instead I could temporarily spin up a proxy server on AWS and the cost to watch an episode of Nova will be less than 10 cents.</p>
+<p>Here&rsquo;s the terraform code to spin up a proxy server on AWS.</p>
+<pre tabindex="0"><code>
+# Define the region variable
+variable &#34;aws_region&#34; {
+  description = &#34;The AWS region to deploy resources in&#34;
+  type        = string
+  default     = &#34;us-west-2&#34;  # You can change this default if needed
+}
+
+variable &#34;allowed_ip&#34; {
+  description = &#34;The IP address that is allowed to access the Squid proxy&#34;
+  type        = string
+  default     = &#34;4.2.2.2/32&#34; # Modify this IP to your liking.  Go to http://checkip.amazonaws.com/ and get your public IP address.
+}
+
+provider &#34;aws&#34; {
+  region = var.aws_region
+}
+
+# Fetch the default VPC in the region, you typically do not want to use the default VPC, but for a personal project it&#39;s fine.
+data &#34;aws_vpc&#34; &#34;default&#34; {
+  filter {
+    name   = &#34;isDefault&#34;
+    values = [&#34;true&#34;]
+  }
+
+}
+
+data &#34;aws_subnets&#34; &#34;default_vpc_subnets&#34; {
+  filter {
+    name   = &#34;vpc-id&#34;
+    values = [data.aws_vpc.default.id]
+  }
+
+}
+
+# Select the first subnet from the list of subnets
+data &#34;aws_subnet&#34; &#34;first&#34; {
+  id = data.aws_subnets.default_vpc_subnets.ids[0]
+}
+
+# Security Group Resource Blocking all traffic except my IP
+resource &#34;aws_security_group&#34; &#34;squid_proxy_group&#34; {
+  name        = &#34;squid group&#34;
+  description = &#34;squid group&#34;
+  vpc_id      = data.aws_vpc.default.id
+
+  ingress {
+    description = &#34;Allow inbound traffic on port 8080&#34;
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = &#34;tcp&#34;
+    cidr_blocks = [var.allowed_ip]
+  }
+
+  egress {
+    description = &#34;Allow all outbound traffic&#34;
+    from_port   = 0
+    to_port     = 0
+    protocol    = &#34;-1&#34;
+    cidr_blocks = [&#34;0.0.0.0/0&#34;]
+  }
+}
+
+# IAM Role Resource Create an IAM role allow you to use SSM to manage the proxy server.  Use AWS SSM to manage your ec2 instance, its more secure.
+resource &#34;aws_iam_role&#34; &#34;squid_ssm&#34; {
+  name               = &#34;squid-ssm&#34;
+  description        = &#34;Allows EC2 instances to call AWS services on your behalf.&#34;
+  assume_role_policy = &lt;&lt;EOF
+{
+  &#34;Version&#34;: &#34;2012-10-17&#34;,
+  &#34;Statement&#34;: [
+    {
+      &#34;Effect&#34;: &#34;Allow&#34;,
+      &#34;Principal&#34;: {
+        &#34;Service&#34;: &#34;ec2.amazonaws.com&#34;
+      },
+      &#34;Action&#34;: &#34;sts:AssumeRole&#34;
+    }
+  ]
+}
+EOF
+}
+
+# IAM Instance Profile Resource
+resource &#34;aws_iam_instance_profile&#34; &#34;squid_ssm&#34; {
+  name = &#34;squid-ssm&#34;
+  role = aws_iam_role.squid_ssm.name
+}
+
+# IAM Role Policy Attachments
+resource &#34;aws_iam_role_policy_attachment&#34; &#34;squid_ssm_ssm_managed_instance_core&#34; {
+  role       = aws_iam_role.squid_ssm.name
+  policy_arn = &#34;arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore&#34;
+}
+
+# Fetch Amazon Linux 2 AMI
+data &#34;aws_ami&#34; &#34;amazon_linux_2&#34; {
+  most_recent = true
+  owners      = [&#34;amazon&#34;]
+
+  filter {
+    name   = &#34;name&#34;
+    values = [&#34;al2023-ami-*-x86_64&#34;]
+  }
+
+}
+
+# EC2 Instance Resource
+resource &#34;aws_instance&#34; &#34;squid_proxy_vm&#34; {
+  ami                         = data.aws_ami.amazon_linux_2.id
+  instance_type               = &#34;t2.micro&#34;
+  subnet_id                   = data.aws_subnet.first.id
+  associate_public_ip_address = true
+  iam_instance_profile        = aws_iam_instance_profile.squid_ssm.name
+  vpc_security_group_ids      = [aws_security_group.squid_proxy_group.id]
+
+  user_data = &lt;&lt;-EOF
+    #!/bin/bash
+    # Update the system
+    yum update -y
+
+    # Install Squid
+    yum install squid -y
+
+    # Configure Squid
+    cat &lt;&lt;EOT &gt; /etc/squid/squid.conf
+    acl allowed_ips src ${var.allowed_ip}
+    http_access allow allowed_ips
+    http_port 8080
+    EOT
+
+    # Start and enable Squid service
+    systemctl start squid
+    systemctl enable squid
+
+    # Restart Squid to apply the new configuration
+    systemctl restart squid
+  EOF
+
+  tags = {
+    Name = &#34;SquidProxy&#34;
+  }
+
+}
+
+output &#34;proxy_vm_public_ip&#34; {
+  description = &#34;The public IP address of the EC2 instance&#34;
+  value       = aws_instance.squid_proxy_vm.public_ip
+}
+</code></pre><p>Configure <a href="https://support.mozilla.org/en-US/kb/connection-settings-firefox">Firefox</a> to use the proxy server.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://woojae.github.io/" >
+    &copy;  Woojae 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
