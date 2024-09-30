@@ -48,7 +48,7 @@
   <meta itemprop="description" content="I’ve been living in Korea since August. The experience has been fascinating on many levels, though not without its frustrations. One unexpected frustration is the way some websites don’t work here. Website owners block access to users from Asian countries. This is usually to filter out bots and scammers, as well as licensing rights that are geographically bounded. I was not able to log into starbucks.com to purchase a gift card because of this.">
   <meta itemprop="datePublished" content="2024-09-30T15:38:18+09:00">
   <meta itemprop="dateModified" content="2024-09-30T15:38:18+09:00">
-  <meta itemprop="wordCount" content="700">
+  <meta itemprop="wordCount" content="739">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Proxy Vm">
   <meta name="twitter:description" content="I’ve been living in Korea since August. The experience has been fascinating on many levels, though not without its frustrations. One unexpected frustration is the way some websites don’t work here. Website owners block access to users from Asian countries. This is usually to filter out bots and scammers, as well as licensing rights that are geographically bounded. I was not able to log into starbucks.com to purchase a gift card because of this.">
@@ -136,8 +136,9 @@
     </header>
     <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>I’ve been living in Korea since August. The experience has been fascinating on many levels, though not without its frustrations. One unexpected frustration is the way some websites don&rsquo;t work here. Website owners block access to users from Asian countries. This is usually to filter out bots and scammers, as well as licensing rights that are geographically bounded. I was not able to log into starbucks.com to purchase a gift card because of this. Starbucks in Korea is partially owned by the Shinsegae corporation in Korea, so whenever I tried to log into starbucks.com it simply would not work.</p>
 <p>Another thing I was not able to do was watch PBS in Korea. I’ve had an abnormal love of PBS since Jr. High.  I used to record episodes of Frontline, Nova, and American Masters on VHS tapes. I even donated money to PBS. But in Korea I can’t watch Nova or Frontline.</p>
-<p>Since I’m a “devops” engineer I used my Devops wizardry to watch Frontline. The simpler solution would be to purchase a VPN service like (Nord, or Express), but that’s $10 dollars a month, to watch a single episode of Frontline, or buy a starbucks gift card. Instead I could temporarily spin up a proxy server on AWS and the cost to watch an episode of Nova will be less than 10 cents.</p>
-<p>Here&rsquo;s the terraform code to spin up a proxy server on AWS.</p>
+<p>Since I’m a “devops” engineer I used my Devops wizardry to watch Frontline. The simpler solution would be to purchase a VPN service like (Nord, or Express), but that’s $10 dollars a month. That seems like alot of money to watch a single episode of Frontline, or buy a starbucks gift card. Instead I could temporarily spin up a proxy server on AWS and the cost to watch an episode of Nova will be less than 10 cents.</p>
+<p>Here&rsquo;s the terraform code to spin up a proxy server on AWS. This will output a public IP address that you can use to access the proxy server. After running this terraform, configure <a href="https://support.mozilla.org/en-US/kb/connection-settings-firefox">Firefox</a> to use the proxy server.</p>
+<p>Use the public IP address and port 8080 to access the proxy server.</p>
 <pre tabindex="0"><code>
 # Define the region variable
 variable &#34;aws_region&#34; {
@@ -287,8 +288,7 @@ output &#34;proxy_vm_public_ip&#34; {
   description = &#34;The public IP address of the EC2 instance&#34;
   value       = aws_instance.squid_proxy_vm.public_ip
 }
-</code></pre><p>Configure <a href="https://support.mozilla.org/en-US/kb/connection-settings-firefox">Firefox</a> to use the proxy server.</p>
-<ul class="pa0">
+</code></pre><ul class="pa0">
   
 </ul>
 <div class="mt6 instapaper_ignoref">

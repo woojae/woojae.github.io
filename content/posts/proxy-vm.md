@@ -8,9 +8,11 @@ I’ve been living in Korea since August. The experience has been fascinating on
 
 Another thing I was not able to do was watch PBS in Korea. I’ve had an abnormal love of PBS since Jr. High.  I used to record episodes of Frontline, Nova, and American Masters on VHS tapes. I even donated money to PBS. But in Korea I can’t watch Nova or Frontline.  
 
-Since I’m a “devops” engineer I used my Devops wizardry to watch Frontline. The simpler solution would be to purchase a VPN service like (Nord, or Express), but that’s $10 dollars a month, to watch a single episode of Frontline, or buy a starbucks gift card. Instead I could temporarily spin up a proxy server on AWS and the cost to watch an episode of Nova will be less than 10 cents. 
+Since I’m a “devops” engineer I used my Devops wizardry to watch Frontline. The simpler solution would be to purchase a VPN service like (Nord, or Express), but that’s $10 dollars a month. That seems like alot of money to watch a single episode of Frontline, or buy a starbucks gift card. Instead I could temporarily spin up a proxy server on AWS and the cost to watch an episode of Nova will be less than 10 cents. 
 
-Here's the terraform code to spin up a proxy server on AWS.
+Here's the terraform code to spin up a proxy server on AWS. This will output a public IP address that you can use to access the proxy server. After running this terraform, configure [Firefox](https://support.mozilla.org/en-US/kb/connection-settings-firefox) to use the proxy server.
+
+Use the public IP address and port 8080 to access the proxy server.
 
 ```
 
@@ -164,4 +166,4 @@ output "proxy_vm_public_ip" {
 }
 ```
 
-Configure [Firefox](https://support.mozilla.org/en-US/kb/connection-settings-firefox) to use the proxy server.
+
