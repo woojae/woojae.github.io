@@ -1,7 +1,7 @@
 +++
 title = 'Use AI to Create a Proxy VM on Google Cloud'
 date = 2024-10-30T18:57:37+09:00
-draft = true
+draft = false
 +++
 
 AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code. 
