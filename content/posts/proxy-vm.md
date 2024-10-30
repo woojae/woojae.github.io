@@ -12,6 +12,9 @@ Since I’m a “devops” engineer I used my Devops wizardry to watch Frontline
 
 Here's the terraform code to spin up a proxy server on AWS. This will output a public IP address that you can use to access the proxy server. After running this terraform, configure [Firefox](https://support.mozilla.org/en-US/kb/connection-settings-firefox) to use the proxy server.
 
+
+![Firefox setting](https://woojae-images-1.s3.us-west-1.amazonaws.com/firefox_proxy_settings.png)
+
 Use the public IP address and port 8080 to access the proxy server.
 
 ```
