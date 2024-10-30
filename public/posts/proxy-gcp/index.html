@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Use AI to Create a Proxy VM on Google Cloud | Woojae</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.
+The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes.">
+    <meta name="generator" content="Hugo 0.133.1">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/proxy-gcp/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/posts/proxy-gcp/">
+  <meta property="og:site_name" content="Woojae">
+  <meta property="og:title" content="Use AI to Create a Proxy VM on Google Cloud">
+  <meta property="og:description" content="AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.
+The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-10-30T18:57:37+09:00">
+    <meta property="article:modified_time" content="2024-10-30T18:57:37+09:00">
+
+  <meta itemprop="name" content="Use AI to Create a Proxy VM on Google Cloud">
+  <meta itemprop="description" content="AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.
+The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes.">
+  <meta itemprop="datePublished" content="2024-10-30T18:57:37+09:00">
+  <meta itemprop="dateModified" content="2024-10-30T18:57:37+09:00">
+  <meta itemprop="wordCount" content="384">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Use AI to Create a Proxy VM on Google Cloud">
+  <meta name="twitter:description" content="AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.
+The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes.">
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Woojae
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Post page">
+              Post
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Use AI to Create a Proxy VM on Google Cloud</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-10-30T18:57:37+09:00">October 30, 2024</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.</p>
+<p>The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes.  But the AI was able to do it in under 5 seconds. So 240 times faster than a human expert.  Sucks to be human.</p>
+<p>Here&rsquo;s the AI generated code.</p>
+<pre tabindex="0"><code># Variables
+variable &#34;project&#34; {
+  description = &#34;The GCP project ID&#34;
+  type        = string
+  default     = &#34;google-project-id&#34;  # Replace with your actual GCP project ID
+}
+
+variable &#34;region&#34; {
+  description = &#34;The GCP region to deploy resources in&#34;
+  type        = string
+  default     = &#34;us-west1&#34;
+}
+
+variable &#34;zone&#34; {
+  description = &#34;The GCP zone to deploy resources in&#34;
+  type        = string
+  default     = &#34;us-west1-a&#34;
+}
+
+variable &#34;allowed_ip&#34; {
+  description = &#34;The IP address that is allowed to access the Squid proxy&#34;
+  type        = string
+  default     = &#34;4.23.4.2/32&#34;  # Modify this IP to your liking.  Go to http://checkip.amazonaws.com/ and get your public IP address.
+}
+
+# Provider Configuration
+provider &#34;google&#34; {
+  project = var.project
+  region  = var.region
+  zone    = var.zone
+}
+
+# Fetch the default network
+data &#34;google_compute_network&#34; &#34;default&#34; {
+  name = &#34;default&#34;
+}
+
+# Firewall Rule to Allow Inbound Traffic on Port 8080
+resource &#34;google_compute_firewall&#34; &#34;squid_proxy_firewall&#34; {
+  name    = &#34;squid-proxy-firewall&#34;
+  network = data.google_compute_network.default.self_link
+
+  allow {
+    protocol = &#34;tcp&#34;
+    ports    = [&#34;8080&#34;]
+  }
+
+  source_ranges = [var.allowed_ip]
+
+  target_tags = [&#34;squid-proxy&#34;]
+}
+
+# Compute Engine Instance
+resource &#34;google_compute_instance&#34; &#34;squid_proxy_vm&#34; {
+  name         = &#34;squid-proxy-vm&#34;
+  machine_type = &#34;e2-micro&#34;
+  zone         = var.zone
+
+  boot_disk {
+    initialize_params {
+      image = &#34;projects/ubuntu-os-cloud/global/images/family/ubuntu-2204-lts&#34;
+    }
+  }
+
+  network_interface {
+    network = data.google_compute_network.default.self_link
+
+    access_config {
+      # Ephemeral public IP
+    }
+  }
+
+  metadata_startup_script = &lt;&lt;-EOF
+    #!/bin/bash
+    # Update the system
+    apt-get update -y
+
+    # Install Squid
+    apt-get install squid -y
+
+    # Configure Squid
+    cat &lt;&lt;EOT &gt; /etc/squid/squid.conf
+    acl allowed_ips src ${var.allowed_ip}
+    http_access allow allowed_ips
+    http_port 8080
+    EOT
+
+    # Restart Squid to apply the new configuration
+    systemctl restart squid
+  EOF
+
+  tags = [&#34;squid-proxy&#34;]
+}
+
+# Output the Public IP Address
+output &#34;proxy_vm_public_ip&#34; {
+  description = &#34;The public IP address of the Compute Engine instance&#34;
+  value       = google_compute_instance.squid_proxy_vm.network_interface[0].access_config[0].nat_ip
+}
+</code></pre><ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  Woojae 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
