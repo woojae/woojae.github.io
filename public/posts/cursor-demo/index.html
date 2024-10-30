@@ -51,7 +51,7 @@ I found Cursor to be quite impressive, though not entirely mind-blowing. It feel
 I found Cursor to be quite impressive, though not entirely mind-blowing. It feels like a set of significant user interface improvements to GitHub Copilot. These enhancements are impactful and highly useful.">
   <meta itemprop="datePublished" content="2024-09-05T10:22:22+09:00">
   <meta itemprop="dateModified" content="2024-09-05T10:22:22+09:00">
-  <meta itemprop="wordCount" content="1057">
+  <meta itemprop="wordCount" content="1068">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Cursor Demo">
   <meta name="twitter:description" content="The new popular tool in town is Cursor.ai. Both Paul Graham and Andrej Karpathy tweeted about it, so I decided to see what the hype was all about. As an infrastructure engineer, I tested it by creating infrastructure using Terraform on AWS.
@@ -278,6 +278,15 @@ resource &#34;aws_s3_bucket_versioning&#34; &#34;woojae_poop&#34; {
 </code></pre><p>Maybe it was my prompt, but this result was a bit off. I didn’t want to create a new DynamoDB table, and the provider region was incorrect. Since I&rsquo;ve done this type of work a lot, I could spot the mistakes easily, but a junior engineer or developer might run this without noticing, creating a mess for me to clean up. Fixing Terraform issues can be extremely difficult. The <code>terraform import</code> syntax is awkward and tricky to execute, especially when importing a resource created with a complex modules. Even worse, you could accidentally delete a resource.</p>
 <p>Cursor feels like an upgraded version of my current workflow, which combines ChatGPT and GitHub Copilot. The UI improvements reduce the need for copying and pasting, and this technology will keep improving in the future. I&rsquo;ve been using AI daily for the past two years, and while it&rsquo;s gotten better, it still feels like we&rsquo;re some time away from making infrastructure engineers completely unnecessary. AI is great at handling basic coding and syntax, but infrastructure engineering involves complex decisions, like determining subnet size, configuring node groups, encrypting S3 buckets, and setting proper permissions for Terraform.</p>
 <p>The &ldquo;glue&rdquo; code that infrastructure engineers often manage will likely be the hardest for AI to automate. This code typically bridges gaps between engineering teams, resolves subtle, unintended interactions between different software systems, and accounts for a series of undocumented manual steps performed by some random engineer five years ago.</p>
+<p>Here&rsquo;s an interview with the Cursor team.  These guys are amazing.</p>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/oFfVt3S51T4?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
 <ul class="pa0">
   
 </ul>

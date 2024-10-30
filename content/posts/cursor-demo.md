@@ -169,3 +169,7 @@ Maybe it was my prompt, but this result was a bit off. I didn’t want to create
 Cursor feels like an upgraded version of my current workflow, which combines ChatGPT and GitHub Copilot. The UI improvements reduce the need for copying and pasting, and this technology will keep improving in the future. I've been using AI daily for the past two years, and while it's gotten better, it still feels like we're some time away from making infrastructure engineers completely unnecessary. AI is great at handling basic coding and syntax, but infrastructure engineering involves complex decisions, like determining subnet size, configuring node groups, encrypting S3 buckets, and setting proper permissions for Terraform. 
 
 The "glue" code that infrastructure engineers often manage will likely be the hardest for AI to automate. This code typically bridges gaps between engineering teams, resolves subtle, unintended interactions between different software systems, and accounts for a series of undocumented manual steps performed by some random engineer five years ago.
+
+Here's an interview with the Cursor team.  These guys are amazing.
+
+{{< youtube oFfVt3S51T4 >}}
