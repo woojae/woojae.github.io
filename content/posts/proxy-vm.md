@@ -1,5 +1,5 @@
 +++
-title = 'Proxy Vm'
+title = 'I’ve been living in Korea since August I need a Proxy Vm'
 date = 2024-09-30T15:38:18+09:00
 draft = false
 +++

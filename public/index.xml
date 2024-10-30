@@ -16,7 +16,7 @@
       <description>AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.&#xA;The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes.</description>
     </item>
     <item>
-      <title>Proxy Vm</title>
+      <title>I’ve been living in Korea since August I need a Proxy Vm</title>
       <link>https://woojae.github.io/posts/proxy-vm/</link>
       <pubDate>Mon, 30 Sep 2024 15:38:18 +0900</pubDate>
       <guid>https://woojae.github.io/posts/proxy-vm/</guid>
