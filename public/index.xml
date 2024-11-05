@@ -13,7 +13,7 @@
       <link>https://woojae.github.io/posts/proxy-gcp/</link>
       <pubDate>Wed, 30 Oct 2024 18:57:37 +0900</pubDate>
       <guid>https://woojae.github.io/posts/proxy-gcp/</guid>
-      <description>AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.&#xA;graph TB %% External Components User((User IP 4.23.4.2/32)) Internet((Internet)) %% GCP Cloud subgraph GCP[GCP Region: us-west1] subgraph VPC[Default Network] %% Compute Instance subgraph Zone[Zone: us-west1-a] VM[Compute Engine Instance Squid Proxy e2-micro Ubuntu 22.</description>
+      <description>AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.&#xA;The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes.</description>
     </item>
     <item>
       <title>I’ve been living in Korea since August I need a Proxy Vm</title>

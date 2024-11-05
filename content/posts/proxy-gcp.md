@@ -6,6 +6,8 @@ draft = false
 
 AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.
 
+The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes.  But the AI was able to do it in under 5 seconds. So 240 times faster than a human expert.  Sucks to be human. 
+
 ```mermaid
 graph TB
     %% External Components
@@ -53,8 +55,6 @@ graph TB
     class VM,FW resource;
     class Boot,Network,Tags,VM_Config config;
 ```
-
-The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes.  But the AI was able to do it in under 5 seconds. So 240 times faster than a human expert.  Sucks to be human. 
 
 Here's the AI generated code.
 
