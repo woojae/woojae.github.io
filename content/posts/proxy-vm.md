@@ -6,9 +6,43 @@ draft = false
 
 I’ve been living in Korea since August. The experience has been fascinating on many levels, though not without its frustrations. One unexpected frustration is the way some websites don't work here. Website owners block access to users from Asian countries. This is usually to filter out bots and scammers, as well as licensing rights that are geographically bounded. I was not able to log into starbucks.com to purchase a gift card because of this. Starbucks in Korea is partially owned by the Shinsegae corporation in Korea, so whenever I tried to log into starbucks.com it simply would not work.
 
-Another thing I was not able to do was watch PBS in Korea. I’ve had an abnormal love of PBS since Jr. High.  I used to record episodes of Frontline, Nova, and American Masters on VHS tapes. I even donated money to PBS. But in Korea I can’t watch Nova or Frontline.  
+Another thing I was not able to do was watch PBS in Korea. Don't judge me but I've always loved watching boring stuff on PBS. I even donated money to PBS. But in Korea I can’t watch Nova or Frontline.  
 
-Since I’m a “devops” engineer I used my Devops wizardry to watch Frontline. The simpler solution would be to purchase a VPN service like (Nord, or Express), but that’s $10 dollars a month. That seems like alot of money to watch a single episode of Frontline, or buy a starbucks gift card. Instead I could temporarily spin up a proxy server on AWS and the cost to watch an episode of Nova will be less than 10 cents. 
+Since I’m a “devops” engineer I used my Devops wizardry to solve this regional issue. The simpler solution would be to purchase a VPN service like (Nord, or Express), but that’s $10 dollars a month. That seems like alot of money to buy a starbucks gift card. Instead I could temporarily spin up a proxy server on AWS and the cost to watch some boring show on PBS will be less than 10 cents.
+
+```mermaid
+graph TB
+    subgraph "AWS Region: us-west-2"
+        subgraph "Default VPC"
+            SG["Security Group<br/>squid_proxy_group<br/>(Inbound: 8080/TCP<br/>Outbound: All)"]
+            
+            subgraph "Public Subnet"
+                EC2["EC2 Instance<br/>t2.micro<br/>Amazon Linux 2023<br/>Squid Proxy<br/>Port: 8080"]
+            end
+            
+            IAM["IAM Role<br/>squid-ssm<br/>+ SSM Policy"]
+        end
+    end
+    
+    Client["Client IP<br/>218.237.136.196/32"] -->|"TCP/8080"| SG
+    SG --> EC2
+    IAM -->|"Assumes"| EC2
+    EC2 -->|"Outbound<br/>All Traffic"| Internet[("Internet<br/>0.0.0.0/0")]
+    
+    classDef vpc fill:#f9f,stroke:#333,stroke-width:2px
+    classDef subnet fill:#bbf,stroke:#333,stroke-width:1px
+    classDef securityGroup fill:#ff9,stroke:#333,stroke-width:1px
+    classDef instance fill:#bfb,stroke:#333,stroke-width:1px
+    classDef iam fill:#fcb,stroke:#333,stroke-width:1px
+    classDef client fill:#ddd,stroke:#333,stroke-width:1px
+    classDef internet fill:#ddd,stroke:#333,stroke-width:1px
+    
+    class SG securityGroup
+    class EC2 instance
+    class IAM iam
+    class Client client
+    class Internet internet
+```
 
 Here's the terraform code to spin up a proxy server on AWS. This will output a public IP address that you can use to access the proxy server. After running this terraform, configure [Firefox](https://support.mozilla.org/en-US/kb/connection-settings-firefox) to use the proxy server.
 
@@ -168,5 +202,3 @@ output "proxy_vm_public_ip" {
   value       = aws_instance.squid_proxy_vm.public_ip
 }
 ```
-
-

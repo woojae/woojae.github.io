@@ -4,7 +4,55 @@ date = 2024-10-30T18:57:37+09:00
 draft = false
 +++
 
-AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code. 
+AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.
+
+```mermaid
+graph TB
+    %% External Components
+    User((User IP 4.23.4.2/32))
+    Internet((Internet))
+
+    %% GCP Cloud
+    subgraph GCP[GCP Region: us-west1]
+        subgraph VPC[Default Network]
+            %% Compute Instance
+            subgraph Zone[Zone: us-west1-a]
+                VM[Compute Engine Instance Squid Proxy e2-micro Ubuntu 22.04 LTS]
+            end
+
+            FW[Firewall Rule Inbound: 8080/TCP from allowed IP]
+        end
+    end
+
+    %% Network Connections
+    User -->|Port 8080| FW
+    FW -->|Allow| VM
+    VM -->|Allow All| Internet
+    
+    %% VM Components
+    subgraph VM_Config[VM Configuration]
+        Boot[Boot Disk Ubuntu 22.04]
+        Network[Network Interface Ephemeral Public IP]
+        Tags[Network Tags: squid-proxy]
+    end
+
+    %% Component Relationships
+    Boot --> VM
+    Network --> VM
+    Tags --> VM
+    Tags -.->|Target| FW
+
+    %% Styling
+    classDef gcp fill:#4285F4,stroke:#232F3E,stroke-width:2px,color:white;
+    classDef external fill:#85BBF0,stroke:#232F3E,stroke-width:2px,color:black;
+    classDef resource fill:#FFFFFF,stroke:#232F3E,stroke-width:2px,color:black;
+    classDef config fill:#E1E1E1,stroke:#232F3E,stroke-width:2px,color:black;
+
+    class GCP,VPC,Zone gcp;
+    class User,Internet external;
+    class VM,FW resource;
+    class Boot,Network,Tags,VM_Config config;
+```
 
 The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes.  But the AI was able to do it in under 5 seconds. So 240 times faster than a human expert.  Sucks to be human. 
 
