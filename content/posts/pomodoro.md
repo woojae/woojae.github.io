@@ -27,7 +27,7 @@ The app does exactly what I need and nothing more:
 
 **Requires macOS 14+**
 
-1. Download `Pomodoro-v1.0.zip` from the [latest release](https://github.com/woojae/pomodoro/releases/latest)
+1. Download `Pomodoro-v1.2.zip` from the [latest release](https://github.com/woojae/pomodoro/releases/latest)
 2. Unzip and drag `Pomodoro.app` to `/Applications`
 3. Since the app isn't notarized, right-click the app and select **Open** the first time to bypass Gatekeeper
 4. To start on login: **System Settings > General > Login Items > add Pomodoro.app**
