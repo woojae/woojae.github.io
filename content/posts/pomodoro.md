@@ -1,16 +1,18 @@
 +++
-title = 'Pomodoro Timer for macOS'
+title = 'I Built a macOS Pomodoro Timer with Claude Code'
 date = 2026-02-19T10:00:00+09:00
 draft = false
 +++
 
-I built a minimal Pomodoro timer that lives in the macOS menu bar. There are many of these little Pomodoro apps on the internet, but most of them are scammy adware or charge a fee for bloated premium features I don't need. So I made my own that's free and designed exactly for my minimalist needs.
+I wanted a minimal Pomodoro timer that lives in the macOS menu bar. There are plenty of these apps out there, but most are scammy adware or charge a fee for bloated premium features I don't need. So I decided to make my own.
+
+The whole thing was built using [Claude Code](https://docs.anthropic.com/en/docs/claude-code). I described what I wanted, and it just... made it. The best way I can describe the experience is that it's like having a magic genie that creates a toy for you on demand. I told it I wanted a menu bar timer with markdown logging and session notes, and within a single sitting I had a working macOS app. No Xcode fumbling, no hunting through SwiftUI docs, no Stack Overflow rabbit holes. Just describing what I wanted and watching it appear.
+
+What surprised me most is that the app came out exactly right. Not over-engineered, not missing anything. It does what I need and nothing more. That almost never happens when you build something yourself — you always end up gold-plating some feature or forgetting another. Claude Code just stuck to the spec.
 
 ![Pomodoro Screenshot](https://d3nu6st0wla7pm.cloudfront.net/pomodoro-screenshot.png)
 
 ## Features
-
-The app does exactly what I need and nothing more:
 
 - Configurable work timer and break duration
 - Start / Pause / Reset controls
@@ -22,6 +24,21 @@ The app does exactly what I need and nothing more:
 - Daily markdown log files for easy reading and querying
 - Configurable log folder location
 - No dock icon — lives entirely in the menu bar
+
+## How It Was Built
+
+I ran Claude Code in my terminal and described the app conversationally. The workflow went something like this:
+
+1. "I want a macOS menu bar app with a Pomodoro timer, no dock icon"
+2. "Add a circular progress ring that shows the countdown"
+3. "Before each session, prompt me to log what I'm working on"
+4. "Let me add notes during a session with multi-line markdown support"
+5. "After each session, ask me to reflect on what I accomplished"
+6. "Save everything as daily markdown files"
+
+Each prompt built on the last. Claude Code generated the Swift code, the project config, the build setup — all of it. I could iterate in real time: "make the notes field taller," "add a configurable log folder," "send a macOS notification when the timer finishes." It just worked.
+
+If you've used AI coding tools before, this felt like a step change. With Cursor or Copilot, you're still driving — the AI fills in lines and you steer. With Claude Code, I described a complete app and got a complete app. The difference between autocomplete and a collaborator.
 
 ## Install
 
