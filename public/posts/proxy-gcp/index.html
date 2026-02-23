@@ -1,66 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=livereload" data-no-instant defer></script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Use AI to Create a Proxy VM on Google Cloud | Woojae</title>
+  <meta name="description" content="Woojae">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/retro.css">
+  
     
-    <title>Use AI to Create a Proxy VM on Google Cloud | Woojae</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.
-The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes.  But the AI was able to do it in under 5 seconds. So 240 times faster than a human expert.  Sucks to be human.">
-    <meta name="generator" content="Hugo 0.156.0">
-    
-    
-    
-      <meta name="robots" content="noindex, nofollow">
-    
-    
-
-    
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
-
-
-
-
-    
-
-
-    
-      
-
-    
-
-    
-
-    
-      <link rel="canonical" href="http://localhost:1314/posts/proxy-gcp/">
-    
-
-    
-    
-    <meta property="og:url" content="http://localhost:1314/posts/proxy-gcp/">
-  <meta property="og:site_name" content="Woojae">
-  <meta property="og:title" content="Use AI to Create a Proxy VM on Google Cloud">
-  <meta property="og:description" content="AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.
-The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes. But the AI was able to do it in under 5 seconds. So 240 times faster than a human expert. Sucks to be human.">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-10-30T18:57:37+09:00">
-    <meta property="article:modified_time" content="2024-10-30T18:57:37+09:00">
-
-  <meta itemprop="name" content="Use AI to Create a Proxy VM on Google Cloud">
-  <meta itemprop="description" content="AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.
-The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes. But the AI was able to do it in under 5 seconds. So 240 times faster than a human expert. Sucks to be human.">
-  <meta itemprop="datePublished" content="2024-10-30T18:57:37+09:00">
-  <meta itemprop="dateModified" content="2024-10-30T18:57:37+09:00">
-  <meta itemprop="wordCount" content="502">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Use AI to Create a Proxy VM on Google Cloud">
-  <meta name="twitter:description" content="AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.
-The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes. But the AI was able to do it in under 5 seconds. So 240 times faster than a human expert. Sucks to be human.">
-
-	
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SSKRJFJGB"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -70,16 +20,12 @@ The code wasn’t rocket science and I probably could have done the same thing u
   gtag('config', 'G-3SSKRJFJGB');
 </script>
 
-
-  <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({ startOnLoad: true });
-  </script>
-
-  </head><body class="ma0 avenir bg-near-white development is-page is-page page-proxy-gcp">
-    <header class="site-header">
+  
+</head>
+<body>
+  <header class="site-header">
   <div class="site-logo">
-    <a href="http://localhost:1314/">[ Woojae ]</a>
+    <a href="http://localhost:1313/">[ Woojae ]</a>
   </div>
   <nav class="site-nav">
     
@@ -90,8 +36,8 @@ The code wasn’t rocket science and I probably could have done the same thing u
   </nav>
 </header>
 
-    <main class="pb7" role="main">
-      
+  <main class="site-main">
+    
   <article class="terminal-window">
     <div class="terminal-titlebar">
       <span class="terminal-dot red"></span>
@@ -258,13 +204,20 @@ output &#34;proxy_vm_public_ip&#34; {
     </div>
   </article>
 
-    </main>
-    <footer class="site-footer">
+  </main>
+  <footer class="site-footer">
   <p class="footer-text">
     <span class="neon">&lt;</span> Woojae <span class="neon">/&gt;</span>
     &mdash; POWERED BY PIXELS
   </p>
 </footer>
 
-  </body>
+  
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+  
+  <div class="scanlines"></div>
+</body>
 </html>

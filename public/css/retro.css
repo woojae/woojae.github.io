@@ -565,6 +565,136 @@ a:hover {
   border-bottom: 1px solid var(--border-color);
 }
 
+/* --- Interactive Terminal --- */
+.terminal-output {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.terminal-output .terminal-line {
+  margin-bottom: 0.2rem;
+}
+
+.terminal-output .prompt-line {
+  color: var(--neon-green);
+}
+
+.terminal-output .prompt-line .prompt-symbol {
+  color: var(--neon-cyan);
+  margin-right: 0.5rem;
+}
+
+.terminal-output .error {
+  color: #ff5f56;
+}
+
+.terminal-output .neon-cyan {
+  color: var(--neon-cyan);
+}
+
+.terminal-output .neon-magenta {
+  color: var(--neon-magenta);
+}
+
+.terminal-output .neon-green {
+  color: var(--neon-green);
+}
+
+.terminal-output .text-dim {
+  color: var(--text-dim);
+}
+
+.terminal-output .cmd-highlight {
+  color: var(--neon-yellow);
+}
+
+.terminal-output .hero-title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--neon-cyan);
+  text-shadow: var(--glow-cyan);
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+
+.terminal-output .hero-description {
+  color: var(--text-dim);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.terminal-output .terminal-hint {
+  color: var(--text-dim);
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.terminal-output a {
+  color: var(--neon-cyan);
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 255, 255, 0.3);
+  text-underline-offset: 3px;
+}
+
+.terminal-output a:hover {
+  color: var(--neon-magenta);
+  text-decoration-color: var(--neon-magenta);
+}
+
+.terminal-input-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+}
+
+.terminal-input-line .prompt-symbol {
+  color: var(--neon-cyan);
+  flex-shrink: 0;
+}
+
+.terminal-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--neon-green);
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  caret-color: var(--neon-green);
+  line-height: 1.6;
+}
+
+.terminal-input::placeholder {
+  color: var(--text-dim);
+  opacity: 0.5;
+}
+
+.hero-terminal .terminal-body {
+  padding: 2rem;
+  max-height: 500px;
+  overflow-y: auto;
+  cursor: text;
+}
+
+pre.cowsay {
+  color: var(--neon-yellow);
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.3;
+  margin: 0;
+  background: none;
+  border: none;
+  padding: 0;
+  overflow: visible;
+}
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
   html {
