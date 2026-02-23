@@ -7,8 +7,7 @@
     <title>Woojae</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.133.1">
-    
+    <meta name="generator" content="Hugo 0.156.0">
     
     
     
@@ -17,11 +16,13 @@
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.d05fb5f317fcf33b3a52936399bdf6f47dc776516e1692e412ec7d76f4a5faa2.css" >
+<link rel="stylesheet" href="/ananke/css/main.min.efe4d852f731d5d1fbb87718387202a97aafd768cdcdaed0662bbe6982e91824.css" >
+
 
 
 
     
+
 
     
       
@@ -39,6 +40,8 @@
       <link rel="canonical" href="https://woojae.github.io/posts/">
     
 
+    
+    
     <meta property="og:url" content="https://woojae.github.io/posts/">
   <meta property="og:site_name" content="Woojae">
   <meta property="og:title" content="Posts">
@@ -46,18 +49,17 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Posts">
-  <meta itemprop="datePublished" content="2024-10-30T18:57:37+09:00">
-  <meta itemprop="dateModified" content="2024-10-30T18:57:37+09:00">
+  <meta itemprop="datePublished" content="2026-02-19T10:00:00+09:00">
+  <meta itemprop="dateModified" content="2026-02-19T10:00:00+09:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Posts">
 
       
-  
-    
+      
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SSKRJFJGB"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -68,10 +70,6 @@
           gtag('config', 'G-3SSKRJFJGB');
         }
       </script>
-    
-  
-
-
     
 	
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SSKRJFJGB"></script>
@@ -84,17 +82,14 @@
 </script>
 
 
-  </head>
-
-  <body class="ma0 avenir bg-near-white production">
-
+  </head><body class="ma0 avenir bg-near-white production is-section is-section">
     
 
   <header>
     <div class="pb3-m pb6-l bg-black">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
       
         Woojae
       
@@ -106,17 +101,14 @@
         <ul class="pl0 mr3">
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/posts/" title="Post page">
+            <a class="hover-white white-90 no-underline" href="/posts/" title="Post page">
               Post
             </a>
           </li>
           
         </ul>
       
-      
-<div class="ananke-socials">
-  
-</div>
+      <div class="ananke-socials"></div>
 
     </div>
   </div>
@@ -135,12 +127,47 @@
     <main class="pb7" role="main">
       
   <article class="pa3 pa4-ns nested-copy-line-height">
-    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
-    <section class="flex-ns flex-wrap justify-around mt5">
+    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy nested-links mid-gray"></section>
+    <section class="flex-ns mt5 flex-wrap justify-around">
       
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
+        <div class="w-100 w-30-l mb4 relative bg-white">
+          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/pomodoro/" class="link black dim">
+        Pomodoro Timer for macOS
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>I built a minimal Pomodoro timer that lives in the macOS menu bar. There are many of these little Pomodoro apps on the internet, but most of them are scammy adware or charge a fee for bloated premium features I don&rsquo;t need. So I made my own that&rsquo;s free and designed exactly for my minimalist needs.</p>
+<p><img src="https://d3nu6st0wla7pm.cloudfront.net/pomodoro-screenshot.png" alt="Pomodoro Screenshot"></p>
+<h2 id="features">Features</h2>
+<p>The app does exactly what I need and nothing more:</p>
+<ul>
+<li>Configurable work timer and break duration</li>
+<li>Start / Pause / Reset controls</li>
+<li>Circular progress ring with countdown in the menu bar</li>
+<li>Log what you&rsquo;re working on before each session</li>
+<li>Add detailed notes during a session — supports pasting multi-line markdown</li>
+<li>Reflect on what you accomplished after each session</li>
+<li>macOS notification when timer completes</li>
+<li>Daily markdown log files for easy reading and querying</li>
+<li>Configurable log folder location</li>
+<li>No dock icon — lives entirely in the menu bar</li>
+</ul>
+<h2 id="install">Install</h2>
+<p><strong>Requires macOS 14+</strong></p>
+    </div>
+    <a href="/posts/pomodoro/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="w-100 w-30-l mb4 relative bg-white">
+          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="/posts/proxy-gcp/" class="link black dim">
@@ -148,8 +175,8 @@
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.
-The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes.
+      <p>AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.</p>
+<p>The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes.  But the AI was able to do it in under 5 seconds. So 240 times faster than a human expert.  Sucks to be human.</p>
     </div>
     <a href="/posts/proxy-gcp/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
@@ -157,9 +184,9 @@ The code wasn’t rocket science and I probably could have done the same thing u
 
         </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
+        <div class="w-100 w-30-l mb4 relative bg-white">
+          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="/posts/proxy-vm/" class="link black dim">
@@ -167,7 +194,7 @@ The code wasn’t rocket science and I probably could have done the same thing u
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      I’ve been living in Korea since August. The experience has been fascinating on many levels, though not without its frustrations. One unexpected frustration is the way some websites don&rsquo;t work here. Website owners block access to users from Asian countries. This is usually to filter out bots and scammers, as well as licensing rights that are geographically bounded. I was not able to log into starbucks.com to purchase a gift card because of this.
+      <p>I’ve been living in Korea since August. The experience has been fascinating on many levels, though not without its frustrations. One unexpected frustration is the way some websites don&rsquo;t work here. Website owners block access to users from Asian countries. This is usually to filter out bots and scammers, as well as licensing rights that are geographically bounded. I was not able to log into starbucks.com to purchase a gift card because of this. Starbucks in Korea is partially owned by the Shinsegae corporation in Korea, so whenever I tried to log into starbucks.com it simply would not work.</p>
     </div>
     <a href="/posts/proxy-vm/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
@@ -175,9 +202,9 @@ The code wasn’t rocket science and I probably could have done the same thing u
 
         </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
+        <div class="w-100 w-30-l mb4 relative bg-white">
+          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="/posts/cursor-demo/" class="link black dim">
@@ -185,8 +212,8 @@ The code wasn’t rocket science and I probably could have done the same thing u
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      The new popular tool in town is Cursor.ai. Both Paul Graham and Andrej Karpathy tweeted about it, so I decided to see what the hype was all about. As an infrastructure engineer, I tested it by creating infrastructure using Terraform on AWS.
-I found Cursor to be quite impressive, though not entirely mind-blowing. It feels like a set of significant user interface improvements to GitHub Copilot. These enhancements are impactful and highly useful.
+      <p>The new popular tool in town is Cursor.ai. Both Paul Graham and Andrej Karpathy tweeted about it, so I decided to see what the hype was all about. As an infrastructure engineer, I tested it by creating infrastructure using Terraform on AWS.</p>
+<p>I found Cursor to be quite impressive, though not entirely mind-blowing. It feels like a set of significant user interface improvements to GitHub Copilot. These enhancements are impactful and highly useful. For example, I was able to make changes to Terraform backend, and it automatically applied those backend modifications across all the related Terraform resources.</p>
     </div>
     <a href="/posts/cursor-demo/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
@@ -194,9 +221,9 @@ I found Cursor to be quite impressive, though not entirely mind-blowing. It feel
 
         </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
+        <div class="w-100 w-30-l mb4 relative bg-white">
+          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="/posts/fix-posture/" class="link black dim">
@@ -204,8 +231,8 @@ I found Cursor to be quite impressive, though not entirely mind-blowing. It feel
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      During my time in Korea, one of my main goals is to work on improving my posture. I&rsquo;ve struggled with poor posture for most of my life, which has led to an unattractive hunchback and constant back pain. Now that I have some time off, I&rsquo;m determined to correct it.
-I&rsquo;ve done some research using ChatGPT and YouTube, and this is what I came up with. Let&rsquo;s see if works.
+      <p>During my time in Korea, one of my main goals is to work on improving my posture. I&rsquo;ve struggled with poor posture for most of my life, which has led to an unattractive hunchback and constant back pain. Now that I have some time off, I&rsquo;m determined to correct it.</p>
+<p>I&rsquo;ve done some research using ChatGPT and YouTube, and this is what I came up with.  Let&rsquo;s see if works.</p>
     </div>
     <a href="/posts/fix-posture/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
@@ -213,9 +240,9 @@ I&rsquo;ve done some research using ChatGPT and YouTube, and this is what I came
 
         </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
+        <div class="w-100 w-30-l mb4 relative bg-white">
+          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="/posts/hugo-installation/" class="link black dim">
@@ -223,7 +250,7 @@ I&rsquo;ve done some research using ChatGPT and YouTube, and this is what I came
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul.
+      <p>I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul. Even if Hugo one day bites the dust or stops getting updates, I’ll still have my trusty Markdown and HTML files, which means my site can live on forever.</p>
     </div>
     <a href="/posts/hugo-installation/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
@@ -231,9 +258,9 @@ I&rsquo;ve done some research using ChatGPT and YouTube, and this is what I came
 
         </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
+        <div class="w-100 w-30-l mb4 relative bg-white">
+          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="/posts/terraform-dynamic/" class="link black dim">
@@ -241,8 +268,10 @@ I&rsquo;ve done some research using ChatGPT and YouTube, and this is what I came
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      How to Use Terraform Dynamics Today, we&rsquo;re focusing on a particularly powerful feature: Terraform Dynamics. This tool is essential for writing more efficient and maintainable code by helping you adhere to the DRY (Don&rsquo;t Repeat Yourself) principle.
-Why You Should Care About Terraform Dynamics Let’s get one thing straight: if you enjoy writing the same block of code over and over again, this post isn’t for you. Terraform dynamics is for the lazy (read: efficient) engineers who believe that copy-pasting is a crime punishable by endless debugging sessions.
+      <h3 id="how-to-use-terraform-dynamics">How to Use Terraform Dynamics</h3>
+<p>Today, we&rsquo;re focusing on a particularly powerful feature: <strong>Terraform Dynamics</strong>. This tool is essential for writing more efficient and maintainable code by helping you adhere to the DRY (Don&rsquo;t Repeat Yourself) principle.</p>
+<h4 id="why-you-should-care-about-terraform-dynamics">Why You Should Care About Terraform Dynamics</h4>
+<p>Let’s get one thing straight: if you enjoy writing the same block of code over and over again, this post isn’t for you. Terraform dynamics is for the <em>lazy</em> (read: efficient) engineers who believe that copy-pasting is a crime punishable by endless debugging sessions.</p>
     </div>
     <a href="/posts/terraform-dynamic/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
@@ -250,9 +279,9 @@ Why You Should Care About Terraform Dynamics Let’s get one thing straight: if 
 
         </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
+        <div class="w-100 w-30-l mb4 relative bg-white">
+          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="/posts/my-first-post/" class="link black dim">
@@ -260,7 +289,8 @@ Why You Should Care About Terraform Dynamics Let’s get one thing straight: if 
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Introduction I&rsquo;ve finally decided to retire my old Tumblr page. It&rsquo;s honestly surprising that it’s still functioning after a decade of neglect, but the time has come to move on. I&rsquo;m transitioning to Hugo, a static site generator. I chose Hugo for my new website because it allows me to host it for free, and a static site offers the scalability and longevity I’m looking for. More complex setups eventually break down as frameworks become obsolete.
+      <h2 id="introduction">Introduction</h2>
+<p>I&rsquo;ve finally decided to retire my old Tumblr page. It&rsquo;s honestly surprising that it’s still functioning after a decade of neglect, but the time has come to move on. I&rsquo;m transitioning to <a href="https://gohugo.io/">Hugo</a>, a static site generator. I chose Hugo for my new website because it allows me to host it for free, and a static site offers the scalability and longevity I’m looking for. More complex setups eventually break down as frameworks become obsolete.</p>
     </div>
     <a href="/posts/my-first-post/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
@@ -268,18 +298,16 @@ Why You Should Care About Terraform Dynamics Let’s get one thing straight: if 
 
         </div>
       
-    </section></article>
+    </section>
+    </article>
 
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://woojae.github.io/" >
-    &copy;  Woojae 2024 
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="https://woojae.github.io/" >
+    &copy;  Woojae 2026 
   </a>
-    <div>
-<div class="ananke-socials">
-  
-</div>
+    <div><div class="ananke-socials"></div>
 </div>
   </div>
 </footer>

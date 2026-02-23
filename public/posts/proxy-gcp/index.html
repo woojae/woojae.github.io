@@ -7,9 +7,8 @@
     <title>Use AI to Create a Proxy VM on Google Cloud | Woojae</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.
-The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes.">
-    <meta name="generator" content="Hugo 0.133.1">
-    
+The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes.  But the AI was able to do it in under 5 seconds. So 240 times faster than a human expert.  Sucks to be human.">
+    <meta name="generator" content="Hugo 0.156.0">
     
     
     
@@ -18,11 +17,13 @@ The code wasn’t rocket science and I probably could have done the same thing u
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.d05fb5f317fcf33b3a52936399bdf6f47dc776516e1692e412ec7d76f4a5faa2.css" >
+<link rel="stylesheet" href="/ananke/css/main.min.efe4d852f731d5d1fbb87718387202a97aafd768cdcdaed0662bbe6982e91824.css" >
+
 
 
 
     
+
 
     
       
@@ -35,11 +36,13 @@ The code wasn’t rocket science and I probably could have done the same thing u
       <link rel="canonical" href="https://woojae.github.io/posts/proxy-gcp/">
     
 
+    
+    
     <meta property="og:url" content="https://woojae.github.io/posts/proxy-gcp/">
   <meta property="og:site_name" content="Woojae">
   <meta property="og:title" content="Use AI to Create a Proxy VM on Google Cloud">
   <meta property="og:description" content="AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.
-The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes.">
+The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes. But the AI was able to do it in under 5 seconds. So 240 times faster than a human expert. Sucks to be human.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -48,22 +51,21 @@ The code wasn’t rocket science and I probably could have done the same thing u
 
   <meta itemprop="name" content="Use AI to Create a Proxy VM on Google Cloud">
   <meta itemprop="description" content="AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.
-The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes.">
+The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes. But the AI was able to do it in under 5 seconds. So 240 times faster than a human expert. Sucks to be human.">
   <meta itemprop="datePublished" content="2024-10-30T18:57:37+09:00">
   <meta itemprop="dateModified" content="2024-10-30T18:57:37+09:00">
   <meta itemprop="wordCount" content="502">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Use AI to Create a Proxy VM on Google Cloud">
   <meta name="twitter:description" content="AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.
-The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes.">
+The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes. But the AI was able to do it in under 5 seconds. So 240 times faster than a human expert. Sucks to be human.">
 
       
-  
-    
+      
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SSKRJFJGB"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -74,10 +76,6 @@ The code wasn’t rocket science and I probably could have done the same thing u
           gtag('config', 'G-3SSKRJFJGB');
         }
       </script>
-    
-  
-
-
     
 	
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SSKRJFJGB"></script>
@@ -95,10 +93,7 @@ The code wasn’t rocket science and I probably could have done the same thing u
     mermaid.initialize({ startOnLoad: true });
   </script>
 
-  </head>
-
-  <body class="ma0 avenir bg-near-white production">
-
+  </head><body class="ma0 avenir bg-near-white production is-page is-page page-proxy-gcp">
     
    
   
@@ -106,8 +101,8 @@ The code wasn’t rocket science and I probably could have done the same thing u
   <header>
     <div class="bg-black">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
       
         Woojae
       
@@ -119,17 +114,14 @@ The code wasn’t rocket science and I probably could have done the same thing u
         <ul class="pl0 mr3">
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/posts/" title="Post page">
+            <a class="hover-white white-90 no-underline" href="/posts/" title="Post page">
               Post
             </a>
           </li>
           
         </ul>
       
-      
-<div class="ananke-socials">
-  
-</div>
+      <div class="ananke-socials"></div>
 
     </div>
   </div>
@@ -143,29 +135,14 @@ The code wasn’t rocket science and I probably could have done the same thing u
     <main class="pb7" role="main">
       
   
-  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+  <article class="page-proxy-gcp flex-l mw7 center ph3 flex-wrap justify-between">
     <header class="mt4 w-100">
       <aside class="instapaper_ignoref b helvetica tracked ttu">
           
         Posts
-      </aside>
-      
-
-
-
-
-
-
-
-
-
-
-  <div id="sharing" class="mt3 ananke-socials">
-    
-  </div>
-
-
-      <h1 class="f1 athelas mt3 mb1">Use AI to Create a Proxy VM on Google Cloud</h1>
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">Use AI to Create a Proxy VM on Google Cloud</h1>
       
       
       
@@ -175,7 +152,7 @@ The code wasn’t rocket science and I probably could have done the same thing u
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l"><p>AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.</p>
 <p>The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes.  But the AI was able to do it in under 5 seconds. So 240 times faster than a human expert.  Sucks to be human.</p>
 <pre class="mermaid">graph TB
     %% External Components
@@ -326,31 +303,17 @@ output &#34;proxy_vm_public_ip&#34; {
 </code></pre><ul class="pa0">
   
 </ul>
-<div class="mt6 instapaper_ignoref">
+
       
-      
-      </div>
-    </div>
-
-    <aside class="w-30-l mt6-l">
-
-
-
-
-</aside>
-
-  </article>
+    </div></article>
 
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://woojae.github.io/" >
-    &copy;  Woojae 2024 
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="https://woojae.github.io/" >
+    &copy;  Woojae 2026 
   </a>
-    <div>
-<div class="ananke-socials">
-  
-</div>
+    <div><div class="ananke-socials"></div>
 </div>
   </div>
 </footer>

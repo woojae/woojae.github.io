@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/Users/woojae/scripts/woojae_com/woojae.github.io",
+	"sourceRoot": "/Users/wlee/scripts/woojae.github.io",
 	"sources": [
 		"ananke/css/main.css"
 	],

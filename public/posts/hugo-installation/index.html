@@ -6,9 +6,8 @@
     
     <title>Hugo Installation | Woojae</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul.">
-    <meta name="generator" content="Hugo 0.133.1">
-    
+    <meta name="description" content="I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul. Even if Hugo one day bites the dust or stops getting updates, I’ll still have my trusty Markdown and HTML files, which means my site can live on forever.">
+    <meta name="generator" content="Hugo 0.156.0">
     
     
     
@@ -17,11 +16,13 @@
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.d05fb5f317fcf33b3a52936399bdf6f47dc776516e1692e412ec7d76f4a5faa2.css" >
+<link rel="stylesheet" href="/ananke/css/main.min.efe4d852f731d5d1fbb87718387202a97aafd768cdcdaed0662bbe6982e91824.css" >
+
 
 
 
     
+
 
     
       
@@ -34,10 +35,12 @@
       <link rel="canonical" href="https://woojae.github.io/posts/hugo-installation/">
     
 
+    
+    
     <meta property="og:url" content="https://woojae.github.io/posts/hugo-installation/">
   <meta property="og:site_name" content="Woojae">
   <meta property="og:title" content="Hugo Installation">
-  <meta property="og:description" content="I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul.">
+  <meta property="og:description" content="I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul. Even if Hugo one day bites the dust or stops getting updates, I’ll still have my trusty Markdown and HTML files, which means my site can live on forever.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -45,21 +48,20 @@
     <meta property="article:modified_time" content="2024-08-28T11:00:33+09:00">
 
   <meta itemprop="name" content="Hugo Installation">
-  <meta itemprop="description" content="I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul.">
+  <meta itemprop="description" content="I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul. Even if Hugo one day bites the dust or stops getting updates, I’ll still have my trusty Markdown and HTML files, which means my site can live on forever.">
   <meta itemprop="datePublished" content="2024-08-28T11:00:33+09:00">
   <meta itemprop="dateModified" content="2024-08-28T11:00:33+09:00">
   <meta itemprop="wordCount" content="1345">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Hugo Installation">
-  <meta name="twitter:description" content="I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul.">
+  <meta name="twitter:description" content="I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul. Even if Hugo one day bites the dust or stops getting updates, I’ll still have my trusty Markdown and HTML files, which means my site can live on forever.">
 
       
-  
-    
+      
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SSKRJFJGB"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -70,10 +72,6 @@
           gtag('config', 'G-3SSKRJFJGB');
         }
       </script>
-    
-  
-
-
     
 	
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SSKRJFJGB"></script>
@@ -86,10 +84,7 @@
 </script>
 
 
-  </head>
-
-  <body class="ma0 avenir bg-near-white production">
-
+  </head><body class="ma0 avenir bg-near-white production is-page is-page page-hugo-installation">
     
    
   
@@ -97,8 +92,8 @@
   <header>
     <div class="bg-black">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
       
         Woojae
       
@@ -110,17 +105,14 @@
         <ul class="pl0 mr3">
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/posts/" title="Post page">
+            <a class="hover-white white-90 no-underline" href="/posts/" title="Post page">
               Post
             </a>
           </li>
           
         </ul>
       
-      
-<div class="ananke-socials">
-  
-</div>
+      <div class="ananke-socials"></div>
 
     </div>
   </div>
@@ -134,29 +126,14 @@
     <main class="pb7" role="main">
       
   
-  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+  <article class="page-hugo-installation flex-l mw7 center ph3 flex-wrap justify-between">
     <header class="mt4 w-100">
       <aside class="instapaper_ignoref b helvetica tracked ttu">
           
         Posts
-      </aside>
-      
-
-
-
-
-
-
-
-
-
-
-  <div id="sharing" class="mt3 ananke-socials">
-    
-  </div>
-
-
-      <h1 class="f1 athelas mt3 mb1">Hugo Installation</h1>
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">Hugo Installation</h1>
       
       
       
@@ -166,7 +143,7 @@
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul. Even if Hugo one day bites the dust or stops getting updates, I’ll still have my trusty Markdown and HTML files, which means my site can live on forever.</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l"><p>I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul. Even if Hugo one day bites the dust or stops getting updates, I’ll still have my trusty Markdown and HTML files, which means my site can live on forever.</p>
 <p>I love statically rendered sites, it brings back memories of the good old days when you’d just FTP your files up to a server, and boom, you had a website. No fuss, no complicated setups, just pure simplicity. It’s like a throwback to when the web was all about getting content out there without jumping through hoops. Hugo taps into that same vibe, where you can focus on what really matters without being bogged down by unnecessary complexities. It’s refreshing to go back to basics and know that your site will be rock-solid and future-proof, just like the old days.</p>
 <p>Most webpages don’t need the added complexity of managing a database, web server, load balancer, VPCs, security groups, and the like. Keeping it simple is often the best choice.</p>
 <p>Here’s a step-by-step explanation of how I created my website using Hugo and deployed it to GitHub Pages, along with the process for updating the DNS settings on GoDaddy to point to the new website. The full source code for the website can be found on <a href="https://github.com/woojae/woojae.github.io">here</a>.</p>
@@ -239,7 +216,7 @@ git push -u origin master
 <ul>
 <li>
 <p>Open the <code>deploy.yml</code> file and add the following content to set up the GitHub Actions workflow:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Sample workflow for building and deploying a Hugo site to GitHub Pages</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Sample workflow for building and deploying a Hugo site to GitHub Pages</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy Hugo site to Pages</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
@@ -278,7 +255,7 @@ git push -u origin master
 </span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install Hugo CLI</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &amp;&amp; sudo dpkg -i ${{ runner.temp }}/hugo.deb          </span>          
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &amp;&amp; sudo dpkg -i ${{ runner.temp }}/hugo.deb          </span>
 </span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install Dart Sass</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">sudo snap install dart-sass</span>
 </span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Checkout</span>
@@ -300,7 +277,7 @@ git push -u origin master
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          hugo \
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            --gc \
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            --minify \
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            --baseURL &#34;${{ steps.pages.outputs.base_url }}/&#34;          </span>          
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            --baseURL &#34;${{ steps.pages.outputs.base_url }}/&#34;          </span>
 </span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Upload artifact</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/upload-pages-artifact@v3</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
@@ -431,31 +408,17 @@ git push
 <ul class="pa0">
   
 </ul>
-<div class="mt6 instapaper_ignoref">
+
       
-      
-      </div>
-    </div>
-
-    <aside class="w-30-l mt6-l">
-
-
-
-
-</aside>
-
-  </article>
+    </div></article>
 
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://woojae.github.io/" >
-    &copy;  Woojae 2024 
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="https://woojae.github.io/" >
+    &copy;  Woojae 2026 
   </a>
-    <div>
-<div class="ananke-socials">
-  
-</div>
+    <div><div class="ananke-socials"></div>
 </div>
   </div>
 </footer>
