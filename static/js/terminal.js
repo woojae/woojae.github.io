@@ -89,6 +89,7 @@
     if (base === 'sudo') return '<span class="neon-magenta">Nice try.</span>';
     if (base === 'exit') return '<span class="neon-magenta">There is no escape.</span>';
     if (base === 'cowsay') return cmdCowsay(args || 'moo');
+    if (base === 'poop') return '💩';
     if (base === 'pwd') return '/home/visitor/woojae.github.io';
     if (base === 'echo') return escapeHtml(args);
 
@@ -108,6 +109,7 @@
       '  <span class="cmd-highlight">clear</span>       Clear terminal',
       '  <span class="cmd-highlight">cd posts</span>    Navigate to posts',
       '  <span class="cmd-highlight">cowsay</span> &lt;text&gt;  ASCII cow says your text',
+      '  <span class="cmd-highlight">poop</span>        💩',
       '  <span class="cmd-highlight">exit</span>        Try to leave',
     ].join('\n');
   }
