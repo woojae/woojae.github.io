@@ -1,0 +1,39 @@
+{{ define "main" }}
+  {{/* Hero Terminal */}}
+  <div class="hero-terminal terminal-window">
+    <div class="terminal-titlebar">
+      <span class="terminal-dot red"></span>
+      <span class="terminal-dot yellow"></span>
+      <span class="terminal-dot green"></span>
+      <span class="terminal-title">~/woojae</span>
+    </div>
+    <div class="terminal-body">
+      <div class="hero-prompt">
+        <span class="prompt-symbol">$</span> cat welcome.txt
+      </div>
+      <h1 class="hero-title">Welcome to Woojae's Terminal</h1>
+      <p class="hero-description">
+        {{ with .Description }}{{ . }}{{ else }}Engineering notes, projects, and experiments.{{ end }}<span class="blinking-cursor"></span>
+      </p>
+    </div>
+  </div>
+
+  {{/* Recent Posts */}}
+  {{ $pages := where .Site.RegularPages "Section" "posts" }}
+  {{ if $pages }}
+    <h2 class="section-title">// Recent Posts</h2>
+    <div class="post-grid">
+      {{ range first 6 $pages }}
+        <article class="post-card">
+          <div class="post-card-date">{{ .Date.Format "2006-01-02" }}</div>
+          <h3 class="post-card-title">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h3>
+        </article>
+      {{ end }}
+    </div>
+    <div class="view-all">
+      <a href="/posts/">&gt; VIEW ALL POSTS &lt;</a>
+    </div>
+  {{ end }}
+{{ end }}

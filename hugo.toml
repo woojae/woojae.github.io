@@ -7,9 +7,17 @@ theme = 'ananke'
   [services.googleAnalytics]
     ID = 'G-3SSKRJFJGB'
 
+[params]
+  mainSections = ['posts']
+
 [menu]
   [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = -300
+  [[menu.main]]
     identifier = "posts"
-    name = "Post"
+    name = "Posts"
     url = "/posts/"
     weight = -200

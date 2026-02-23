@@ -1,0 +1,29 @@
+{{ define "main" }}
+  <h1 class="page-title">{{ .Title }}</h1>
+
+  <ul class="post-list">
+    {{ range .Paginator.Pages }}
+      <li class="post-list-item">
+        <span class="post-list-cursor">&gt;</span>
+        <span class="post-list-date">{{ .Date.Format "2006-01-02" }}</span>
+        <span class="post-list-title">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </span>
+      </li>
+    {{ end }}
+  </ul>
+
+  {{/* Pagination */}}
+  {{ $pag := .Paginator }}
+  {{ if gt $pag.TotalPages 1 }}
+    <nav class="pagination">
+      {{ if $pag.HasPrev }}
+        <a href="{{ $pag.Prev.URL }}">&lt; PREV</a>
+      {{ end }}
+      <span class="current">[ {{ $pag.PageNumber }} / {{ $pag.TotalPages }} ]</span>
+      {{ if $pag.HasNext }}
+        <a href="{{ $pag.Next.URL }}">NEXT &gt;</a>
+      {{ end }}
+    </nav>
+  {{ end }}
+{{ end }}
