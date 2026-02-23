@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Woojae</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:1314/</link>
     <description>Recent content in Home on Woojae</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 19 Feb 2026 10:00:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1314/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pomodoro Timer for macOS</title>
-      <link>http://localhost:1313/posts/pomodoro/</link>
+      <link>http://localhost:1314/posts/pomodoro/</link>
       <pubDate>Thu, 19 Feb 2026 10:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/pomodoro/</guid>
+      <guid>http://localhost:1314/posts/pomodoro/</guid>
       <description>&lt;p&gt;I built a minimal Pomodoro timer that lives in the macOS menu bar. There are many of these little Pomodoro apps on the internet, but most of them are scammy adware or charge a fee for bloated premium features I don&amp;rsquo;t need. So I made my own that&amp;rsquo;s free and designed exactly for my minimalist needs.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://d3nu6st0wla7pm.cloudfront.net/pomodoro-screenshot.png&#34; alt=&#34;Pomodoro Screenshot&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;&#xA;&lt;p&gt;The app does exactly what I need and nothing more:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Configurable work timer and break duration&lt;/li&gt;&#xA;&lt;li&gt;Start / Pause / Reset controls&lt;/li&gt;&#xA;&lt;li&gt;Circular progress ring with countdown in the menu bar&lt;/li&gt;&#xA;&lt;li&gt;Log what you&amp;rsquo;re working on before each session&lt;/li&gt;&#xA;&lt;li&gt;Add detailed notes during a session — supports pasting multi-line markdown&lt;/li&gt;&#xA;&lt;li&gt;Reflect on what you accomplished after each session&lt;/li&gt;&#xA;&lt;li&gt;macOS notification when timer completes&lt;/li&gt;&#xA;&lt;li&gt;Daily markdown log files for easy reading and querying&lt;/li&gt;&#xA;&lt;li&gt;Configurable log folder location&lt;/li&gt;&#xA;&lt;li&gt;No dock icon — lives entirely in the menu bar&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Requires macOS 14+&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Use AI to Create a Proxy VM on Google Cloud</title>
-      <link>http://localhost:1313/posts/proxy-gcp/</link>
+      <link>http://localhost:1314/posts/proxy-gcp/</link>
       <pubDate>Wed, 30 Oct 2024 18:57:37 +0900</pubDate>
-      <guid>http://localhost:1313/posts/proxy-gcp/</guid>
+      <guid>http://localhost:1314/posts/proxy-gcp/</guid>
       <description>&lt;p&gt;AI is awesome. I had some terraform code to create a proxy vm on AWS so out of curiosity I asked openAI to do the same thing for Google Cloud. I just pasted the AWS terraform code into the openAI chat interface and it magically gave me fully functional Google terraform code.&lt;/p&gt;&#xA;&lt;p&gt;The code wasn’t rocket science and I probably could have done the same thing using my brain in under 20 minutes.  But the AI was able to do it in under 5 seconds. So 240 times faster than a human expert.  Sucks to be human.&lt;/p&gt;</description>
     </item>
     <item>
       <title>I’ve been living in Korea since August I need a Proxy Vm</title>
-      <link>http://localhost:1313/posts/proxy-vm/</link>
+      <link>http://localhost:1314/posts/proxy-vm/</link>
       <pubDate>Mon, 30 Sep 2024 15:38:18 +0900</pubDate>
-      <guid>http://localhost:1313/posts/proxy-vm/</guid>
+      <guid>http://localhost:1314/posts/proxy-vm/</guid>
       <description>&lt;p&gt;I’ve been living in Korea since August. The experience has been fascinating on many levels, though not without its frustrations. One unexpected frustration is the way some websites don&amp;rsquo;t work here. Website owners block access to users from Asian countries. This is usually to filter out bots and scammers, as well as licensing rights that are geographically bounded. I was not able to log into starbucks.com to purchase a gift card because of this. Starbucks in Korea is partially owned by the Shinsegae corporation in Korea, so whenever I tried to log into starbucks.com it simply would not work.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cursor Demo</title>
-      <link>http://localhost:1313/posts/cursor-demo/</link>
+      <link>http://localhost:1314/posts/cursor-demo/</link>
       <pubDate>Thu, 05 Sep 2024 10:22:22 +0900</pubDate>
-      <guid>http://localhost:1313/posts/cursor-demo/</guid>
+      <guid>http://localhost:1314/posts/cursor-demo/</guid>
       <description>&lt;p&gt;The new popular tool in town is Cursor.ai. Both Paul Graham and Andrej Karpathy tweeted about it, so I decided to see what the hype was all about. As an infrastructure engineer, I tested it by creating infrastructure using Terraform on AWS.&lt;/p&gt;&#xA;&lt;p&gt;I found Cursor to be quite impressive, though not entirely mind-blowing. It feels like a set of significant user interface improvements to GitHub Copilot. These enhancements are impactful and highly useful. For example, I was able to make changes to Terraform backend, and it automatically applied those backend modifications across all the related Terraform resources.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fix Posture</title>
-      <link>http://localhost:1313/posts/fix-posture/</link>
+      <link>http://localhost:1314/posts/fix-posture/</link>
       <pubDate>Thu, 29 Aug 2024 09:24:11 +0900</pubDate>
-      <guid>http://localhost:1313/posts/fix-posture/</guid>
+      <guid>http://localhost:1314/posts/fix-posture/</guid>
       <description>&lt;p&gt;During my time in Korea, one of my main goals is to work on improving my posture. I&amp;rsquo;ve struggled with poor posture for most of my life, which has led to an unattractive hunchback and constant back pain. Now that I have some time off, I&amp;rsquo;m determined to correct it.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve done some research using ChatGPT and YouTube, and this is what I came up with.  Let&amp;rsquo;s see if works.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hugo Installation</title>
-      <link>http://localhost:1313/posts/hugo-installation/</link>
+      <link>http://localhost:1314/posts/hugo-installation/</link>
       <pubDate>Wed, 28 Aug 2024 11:00:33 +0900</pubDate>
-      <guid>http://localhost:1313/posts/hugo-installation/</guid>
+      <guid>http://localhost:1314/posts/hugo-installation/</guid>
       <description>&lt;p&gt;I’ve successfully migrated my website to Hugo. The whole point of this move was to build a simple, no-nonsense webpage that’s free to host, scales infinitely, and will stand the test of time. With Hugo, the site is statically rendered, so all I have to do is compress my files and upload them to any web server. The content is written in Markdown, I’m confident will stick around for the long haul. Even if Hugo one day bites the dust or stops getting updates, I’ll still have my trusty Markdown and HTML files, which means my site can live on forever.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Use Terraform Dynamics</title>
-      <link>http://localhost:1313/posts/terraform-dynamic/</link>
+      <link>http://localhost:1314/posts/terraform-dynamic/</link>
       <pubDate>Tue, 27 Aug 2024 09:40:33 +0900</pubDate>
-      <guid>http://localhost:1313/posts/terraform-dynamic/</guid>
+      <guid>http://localhost:1314/posts/terraform-dynamic/</guid>
       <description>&lt;h3 id=&#34;how-to-use-terraform-dynamics&#34;&gt;How to Use Terraform Dynamics&lt;/h3&gt;&#xA;&lt;p&gt;Today, we&amp;rsquo;re focusing on a particularly powerful feature: &lt;strong&gt;Terraform Dynamics&lt;/strong&gt;. This tool is essential for writing more efficient and maintainable code by helping you adhere to the DRY (Don&amp;rsquo;t Repeat Yourself) principle.&lt;/p&gt;&#xA;&lt;h4 id=&#34;why-you-should-care-about-terraform-dynamics&#34;&gt;Why You Should Care About Terraform Dynamics&lt;/h4&gt;&#xA;&lt;p&gt;Let’s get one thing straight: if you enjoy writing the same block of code over and over again, this post isn’t for you. Terraform dynamics is for the &lt;em&gt;lazy&lt;/em&gt; (read: efficient) engineers who believe that copy-pasting is a crime punishable by endless debugging sessions.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My First Post</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
+      <link>http://localhost:1314/posts/my-first-post/</link>
       <pubDate>Mon, 26 Aug 2024 20:10:06 +0900</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <guid>http://localhost:1314/posts/my-first-post/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve finally decided to retire my old Tumblr page. It&amp;rsquo;s honestly surprising that it’s still functioning after a decade of neglect, but the time has come to move on. I&amp;rsquo;m transitioning to &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, a static site generator. I chose Hugo for my new website because it allows me to host it for free, and a static site offers the scalability and longevity I’m looking for. More complex setups eventually break down as frameworks become obsolete.&lt;/p&gt;</description>
     </item>
   </channel>

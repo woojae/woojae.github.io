@@ -1,7 +1,7 @@
 +++
 title = 'Cursor Demo'
 date = 2024-09-05T10:22:22+09:00
-draft = false
+draft = true
 +++
 
 The new popular tool in town is Cursor.ai. Both Paul Graham and Andrej Karpathy tweeted about it, so I decided to see what the hype was all about. As an infrastructure engineer, I tested it by creating infrastructure using Terraform on AWS.
