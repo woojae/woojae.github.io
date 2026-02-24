@@ -117,9 +117,16 @@
   function cmdAbout() {
     return [
       '<span class="neon-cyan">Woojae Lee</span>',
-      'Software engineer. Builder of things.',
-      'Interested in systems, tools, and making',
-      'computers do interesting stuff.',
+      '<span class="neon-green">DevOps Engineer</span>',
+      '',
+      'I build and maintain the infrastructure that keeps',
+      'software running. Mostly DevOps — CI/CD pipelines,',
+      'cloud infrastructure, container orchestration, and',
+      'making sure things don\'t break at 3 AM.',
+      '',
+      'When I\'m not automating deployments, I tinker with',
+      'systems tooling, developer experience, and the',
+      'occasional side project.',
       '',
       '<span class="neon-green">GitHub:</span>  <a href="https://github.com/woojae" target="_blank">github.com/woojae</a>',
     ].join('\n');
