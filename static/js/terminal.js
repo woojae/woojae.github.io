@@ -149,9 +149,9 @@
   function cmdAbout() {
     return [
       '<span class="neon-cyan">Woojae Lee</span>',
-      'Software engineer. Builder of things.',
-      'Interested in systems, tools, and making',
-      'computers do interesting stuff.',
+      'Software engineer. Mostly devops. Builder of things.',
+      'Interested in bicycling, tetris, and making',
+      'computers do stuff.',
       '',
       '<span class="neon-green">GitHub:</span>  <a href="https://github.com/woojae" target="_blank">github.com/woojae</a>',
     ].join('\n');

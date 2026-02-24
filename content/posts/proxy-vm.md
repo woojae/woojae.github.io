@@ -8,7 +8,7 @@ I’ve been living in Korea since August. The experience has been fascinating on
 
 Another thing I was not able to do was watch PBS in Korea. Don't judge me but I've always loved watching boring stuff on PBS. I even donated money to PBS. But in Korea I can’t watch Nova or Frontline.  
 
-Since I’m a “devops” engineer I used my Devops wizardry to solve this regional issue. The simpler solution would be to purchase a VPN service like (Nord, or Express), but that’s $10 dollars a month. That seems like alot of money to buy a starbucks gift card. Instead I could temporarily spin up a proxy server on AWS and the cost to watch some boring show on PBS will be less than 10 cents.
+Since I’m a “devops” engineer I used my Devops skillz to solve this regional issue. The simpler solution would be to purchase a VPN service like (Nord, or Express), but that’s $10 dollars a month. That seems like alot of money to buy a starbucks gift card. Instead I could temporarily spin up a proxy server on AWS and the cost to watch some boring show on PBS will be less than 10 cents.
 
 ```mermaid
 graph TB
