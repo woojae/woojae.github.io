@@ -384,7 +384,7 @@
   }
 
   function cmdMatrix() {
-    var matrixChars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789';
+    var matrixChars = 'ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㅏㅑㅓㅕㅗㅛㅜㅠㅡㅣ가나다라마바사아자차카타파하0123456789';
     var lineCount = 0;
     inputLine.style.display = 'none';
     appendOutput('<span class="neon-green">[Entering the Matrix...]</span>');

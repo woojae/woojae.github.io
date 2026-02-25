@@ -1,6 +1,6 @@
 +++
 title = 'BlockX: Because I Cannot Be Trusted With the Internet'
-date = 2026-02-25T12:00:00+09:00
+date = 2026-02-24T18:00:00-08:00
 draft = false
 +++
 
