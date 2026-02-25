@@ -103,6 +103,7 @@
     if (base === 'history') return cmdHistory();
     if (base === 'vim' || base === 'vi' || base === 'nano' || base === 'emacs') return cmdVim(base);
     if (base === 'matrix') { cmdMatrix(); return null; }
+    if (base === 'tetris') { cmdTetris(); return null; }
     if (base === 'ascii') return cmdAscii();
 
     return '<span class="error">bash: ' + escapeHtml(base) + ': command not found</span>';
@@ -134,6 +135,7 @@
       '  <span class="cmd-highlight">matrix</span>         Enter the Matrix',
       '  <span class="cmd-highlight">hack</span>           Initiate hack sequence',
       '  <span class="cmd-highlight">sl</span>             🚂 Choo choo!',
+      '  <span class="cmd-highlight">tetris</span>         🎮 Play Tetris!',
       '  <span class="cmd-highlight">ascii</span>          Random ASCII art',
       '  <span class="cmd-highlight">flip</span>           Flip a table',
       '  <span class="cmd-highlight">unflip</span>         Put the table back',
@@ -413,6 +415,312 @@
       scrollToBottom();
       lineCount++;
     }, 150);
+  }
+
+  function cmdTetris() {
+    var PIECES = [
+      { shape: [[1,1,1,1]], color: '#00ffff' },
+      { shape: [[1,1],[1,1]], color: '#ffff00' },
+      { shape: [[0,1,0],[1,1,1]], color: '#ff00ff' },
+      { shape: [[0,1,1],[1,1,0]], color: '#00ff00' },
+      { shape: [[1,1,0],[0,1,1]], color: '#ff0000' },
+      { shape: [[1,0,0],[1,1,1]], color: '#0088ff' },
+      { shape: [[0,0,1],[1,1,1]], color: '#ff8800' }
+    ];
+
+    var COLS = 10;
+    var ROWS = 18;
+    var board = [];
+    var boardColors = [];
+    var score = 0;
+    var linesCleared = 0;
+    var gameOver = false;
+    var current = null;
+    var currentX = 0;
+    var currentY = 0;
+    var currentColor = '';
+    var next = null;
+    var nextColor = '';
+    var dropInterval = null;
+    var speed = 500;
+    var level = 1;
+
+    for (var r = 0; r < ROWS; r++) {
+      board[r] = [];
+      boardColors[r] = [];
+      for (var c = 0; c < COLS; c++) {
+        board[r][c] = 0;
+        boardColors[r][c] = '';
+      }
+    }
+
+    var gameEl = document.createElement('div');
+    gameEl.className = 'terminal-line';
+    output.appendChild(gameEl);
+    inputLine.style.display = 'none';
+
+    function randomPiece() {
+      var p = PIECES[Math.floor(Math.random() * PIECES.length)];
+      return { shape: p.shape.map(function(row) { return row.slice(); }), color: p.color };
+    }
+
+    function spawnPiece() {
+      if (next === null) {
+        var p = randomPiece();
+        next = p.shape;
+        nextColor = p.color;
+      }
+      current = next;
+      currentColor = nextColor;
+      var p2 = randomPiece();
+      next = p2.shape;
+      nextColor = p2.color;
+      currentX = Math.floor((COLS - current[0].length) / 2);
+      currentY = 0;
+      if (collides(current, currentX, currentY)) {
+        gameOver = true;
+      }
+    }
+
+    function collides(shape, offX, offY) {
+      for (var r = 0; r < shape.length; r++) {
+        for (var c = 0; c < shape[r].length; c++) {
+          if (shape[r][c]) {
+            var nr = offY + r;
+            var nc = offX + c;
+            if (nr < 0 || nr >= ROWS || nc < 0 || nc >= COLS) return true;
+            if (board[nr][nc]) return true;
+          }
+        }
+      }
+      return false;
+    }
+
+    function merge() {
+      for (var r = 0; r < current.length; r++) {
+        for (var c = 0; c < current[r].length; c++) {
+          if (current[r][c]) {
+            board[currentY + r][currentX + c] = 1;
+            boardColors[currentY + r][currentX + c] = currentColor;
+          }
+        }
+      }
+    }
+
+    function checkLines() {
+      var cleared = 0;
+      for (var r = ROWS - 1; r >= 0; r--) {
+        var full = true;
+        for (var c = 0; c < COLS; c++) {
+          if (!board[r][c]) { full = false; break; }
+        }
+        if (full) {
+          board.splice(r, 1);
+          boardColors.splice(r, 1);
+          var newRow = [];
+          var newCRow = [];
+          for (var c2 = 0; c2 < COLS; c2++) { newRow.push(0); newCRow.push(''); }
+          board.unshift(newRow);
+          boardColors.unshift(newCRow);
+          cleared++;
+          r++;
+        }
+      }
+      if (cleared > 0) {
+        var pts = [0, 100, 300, 500, 800];
+        score += (pts[cleared] || 800) * level;
+        linesCleared += cleared;
+        level = Math.floor(linesCleared / 10) + 1;
+        speed = Math.max(100, 500 - (level - 1) * 40);
+        clearInterval(dropInterval);
+        dropInterval = setInterval(drop, speed);
+      }
+    }
+
+    function rotatePiece(shape) {
+      var rows = shape.length;
+      var cols = shape[0].length;
+      var rotated = [];
+      for (var c = 0; c < cols; c++) {
+        rotated[c] = [];
+        for (var r = rows - 1; r >= 0; r--) {
+          rotated[c].push(shape[r][c]);
+        }
+      }
+      return rotated;
+    }
+
+    function padL(s, n) {
+      while (s.length < n) s = ' ' + s;
+      return s;
+    }
+
+    function render() {
+      var display = [];
+      var displayC = [];
+      for (var r = 0; r < ROWS; r++) {
+        display[r] = board[r].slice();
+        displayC[r] = boardColors[r].slice();
+      }
+      if (current && !gameOver) {
+        // Ghost piece (drop preview)
+        var ghostY = currentY;
+        while (!collides(current, currentX, ghostY + 1)) ghostY++;
+        if (ghostY !== currentY) {
+          for (var gr = 0; gr < current.length; gr++) {
+            for (var gc = 0; gc < current[gr].length; gc++) {
+              if (current[gr][gc]) {
+                var gdr = ghostY + gr;
+                var gdc = currentX + gc;
+                if (gdr >= 0 && gdr < ROWS && gdc >= 0 && gdc < COLS && !display[gdr][gdc]) {
+                  display[gdr][gdc] = 2; // ghost marker
+                  displayC[gdr][gdc] = currentColor;
+                }
+              }
+            }
+          }
+        }
+        // Current piece
+        for (var r2 = 0; r2 < current.length; r2++) {
+          for (var c2 = 0; c2 < current[r2].length; c2++) {
+            if (current[r2][c2]) {
+              var dr = currentY + r2;
+              var dc = currentX + c2;
+              if (dr >= 0 && dr < ROWS && dc >= 0 && dc < COLS) {
+                display[dr][dc] = 1;
+                displayC[dr][dc] = currentColor;
+              }
+            }
+          }
+        }
+      }
+
+      var out = [];
+      out.push('<pre class="cowsay" style="line-height:1.2;font-size:0.85em">');
+      out.push('<span class="neon-cyan">╔' + repeat('══', COLS) + '╗</span>  <span class="neon-yellow">Score: ' + padL(String(score), 6) + '</span>');
+
+      for (var r3 = 0; r3 < ROWS; r3++) {
+        var rowStr = '<span class="neon-cyan">║</span>';
+        for (var c3 = 0; c3 < COLS; c3++) {
+          if (display[r3][c3] === 1) {
+            rowStr += '<span style="color:' + displayC[r3][c3] + '">██</span>';
+          } else if (display[r3][c3] === 2) {
+            rowStr += '<span style="color:' + displayC[r3][c3] + ';opacity:0.25">░░</span>';
+          } else {
+            rowStr += '<span class="text-dim" style="opacity:0.1">··</span>';
+          }
+        }
+        rowStr += '<span class="neon-cyan">║</span>';
+        if (r3 === 0) rowStr += '  <span class="neon-yellow">Level: ' + level + '</span>';
+        if (r3 === 1) rowStr += '  <span class="neon-yellow">Lines: ' + linesCleared + '</span>';
+        if (r3 === 3) rowStr += '  <span class="neon-cyan">Next:</span>';
+        if (next && r3 >= 4 && r3 < 4 + next.length) {
+          var nr = '  ';
+          for (var nc = 0; nc < next[r3 - 4].length; nc++) {
+            nr += next[r3 - 4][nc] ? '<span style="color:' + nextColor + '">██</span>' : '  ';
+          }
+          rowStr += nr;
+        }
+        if (r3 === 8)  rowStr += '  <span class="text-dim">← → Move</span>';
+        if (r3 === 9)  rowStr += '  <span class="text-dim"> ↑  Rotate</span>';
+        if (r3 === 10) rowStr += '  <span class="text-dim"> ↓  Soft drop</span>';
+        if (r3 === 11) rowStr += '  <span class="text-dim">SPC Hard drop</span>';
+        if (r3 === 12) rowStr += '  <span class="text-dim"> Q  Quit</span>';
+        out.push(rowStr);
+      }
+      out.push('<span class="neon-cyan">╚' + repeat('══', COLS) + '╝</span>');
+
+      if (gameOver) {
+        out.push('');
+        out.push('<span class="neon-magenta">  ╔══════════════════╗</span>');
+        out.push('<span class="neon-magenta">  ║    GAME OVER     ║</span>');
+        out.push('<span class="neon-magenta">  ║  Score: ' + padL(String(score), 8) + ' ║</span>');
+        out.push('<span class="neon-magenta">  ╚══════════════════╝</span>');
+        out.push('<span class="text-dim">  Press any key...</span>');
+      }
+      out.push('</pre>');
+      gameEl.innerHTML = out.join('\n');
+      scrollToBottom();
+    }
+
+    function drop() {
+      if (gameOver) return;
+      if (!collides(current, currentX, currentY + 1)) {
+        currentY++;
+      } else {
+        merge();
+        checkLines();
+        spawnPiece();
+      }
+      render();
+      if (gameOver) {
+        clearInterval(dropInterval);
+        render();
+      }
+    }
+
+    function handleKey(e) {
+      if (gameOver) {
+        e.preventDefault();
+        cleanup();
+        return;
+      }
+      if (e.key === 'q' || e.key === 'Q') {
+        e.preventDefault();
+        cleanup();
+        return;
+      }
+      e.preventDefault();
+      if (e.key === 'ArrowLeft') {
+        if (!collides(current, currentX - 1, currentY)) currentX--;
+      } else if (e.key === 'ArrowRight') {
+        if (!collides(current, currentX + 1, currentY)) currentX++;
+      } else if (e.key === 'ArrowDown') {
+        if (!collides(current, currentX, currentY + 1)) {
+          currentY++;
+          score += 1;
+        }
+      } else if (e.key === 'ArrowUp') {
+        var rot = rotatePiece(current);
+        // Try normal, then wall kicks
+        if (!collides(rot, currentX, currentY)) {
+          current = rot;
+        } else if (!collides(rot, currentX - 1, currentY)) {
+          current = rot; currentX--;
+        } else if (!collides(rot, currentX + 1, currentY)) {
+          current = rot; currentX++;
+        } else if (!collides(rot, currentX - 2, currentY)) {
+          current = rot; currentX -= 2;
+        } else if (!collides(rot, currentX + 2, currentY)) {
+          current = rot; currentX += 2;
+        }
+      } else if (e.key === ' ') {
+        while (!collides(current, currentX, currentY + 1)) {
+          currentY++;
+          score += 2;
+        }
+        merge();
+        checkLines();
+        spawnPiece();
+        if (gameOver) clearInterval(dropInterval);
+      }
+      render();
+    }
+
+    function cleanup() {
+      clearInterval(dropInterval);
+      document.removeEventListener('keydown', handleKey);
+      inputLine.style.display = '';
+      input.focus();
+      appendOutput('<span class="neon-cyan">GG! Final score: ' + score + ' | Lines: ' + linesCleared + ' | Level: ' + level + '</span>');
+      scrollToBottom();
+    }
+
+    appendOutput('<span class="neon-cyan">🎮 TETRIS</span> <span class="text-dim">— Arrow keys to play, Q to quit</span>');
+    spawnPiece();
+    render();
+    document.addEventListener('keydown', handleKey);
+    dropInterval = setInterval(drop, speed);
   }
 
   var asciiArts = [

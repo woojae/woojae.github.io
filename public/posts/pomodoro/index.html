@@ -51,22 +51,8 @@
         <h1 class="post-title">Pomodoro Timer for macOS</h1>
       </header>
       <div class="post-content">
-        <p>I built a minimal Pomodoro timer that lives in the macOS menu bar. There are many of these little Pomodoro apps on the internet, but most of them are scammy adware or charge a fee for bloated premium features I don&rsquo;t need. So I made my own that&rsquo;s free and designed exactly for my minimalist needs.</p>
+        <p>I built a minimal Pomodoro timer that lives in the macOS menu bar. There are many of these little Pomodoro apps on the internet, but most of them are scammy adware. So I made my own that&rsquo;s free and designed for one user, me.</p>
 <p><img src="https://d3nu6st0wla7pm.cloudfront.net/pomodoro-screenshot.png" alt="Pomodoro Screenshot"></p>
-<h2 id="features">Features</h2>
-<p>The app does exactly what I need and nothing more:</p>
-<ul>
-<li>Configurable work timer and break duration</li>
-<li>Start / Pause / Reset controls</li>
-<li>Circular progress ring with countdown in the menu bar</li>
-<li>Log what you&rsquo;re working on before each session</li>
-<li>Add detailed notes during a session — supports pasting multi-line markdown</li>
-<li>Reflect on what you accomplished after each session</li>
-<li>macOS notification when timer completes</li>
-<li>Daily markdown log files for easy reading and querying</li>
-<li>Configurable log folder location</li>
-<li>No dock icon — lives entirely in the menu bar</li>
-</ul>
 <h2 id="install">Install</h2>
 <p><strong>Requires macOS 14+</strong></p>
 <ol>
@@ -93,29 +79,17 @@
 └── 2026-02-19.md
 </code></pre><p>Each file contains all sessions for that day, with full markdown support — so you can paste code blocks, lists, or any structured notes:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#75715e">## 10:00 — Fix login bug
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">### Notes
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Found the issue in <span style="color:#e6db74">`auth.swift`</span> — token refresh was using the wrong expiry.
-</span></span><span style="display:flex;"><span>
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">### Notes
+</span></span></span><span style="display:flex;"><span>Found the issue in <span style="color:#e6db74">`auth.swift`</span> — token refresh was using the wrong expiry.
 </span></span><span style="display:flex;"><span>Also need to update tests.
-</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">### Reflection
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Rewrote auth token refresh logic
-</span></span><span style="display:flex;"><span>
+</span></span></span><span style="display:flex;"><span>Rewrote auth token refresh logic
 </span></span><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">## 11:30 — Write unit tests
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">### Notes
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Covered happy path and token expiry edge case.
-</span></span><span style="display:flex;"><span>
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">### Notes
+</span></span></span><span style="display:flex;"><span>Covered happy path and token expiry edge case.
 </span></span><span style="display:flex;"><span><span style="color:#75715e">### Reflection
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Added 12 test cases, all passing
-</span></span><span style="display:flex;"><span>
+</span></span></span><span style="display:flex;"><span>Added 12 test cases, all passing
 </span></span><span style="display:flex;"><span>---
 </span></span></code></pre></div><h2 id="shell-helper">Shell Helper</h2>
 <p>I added this to my <code>~/.zshrc</code> to quickly query my pomodoro logs:</p>
