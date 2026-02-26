@@ -101,7 +101,7 @@
     if (base === 'shrug') return '¯\\_(ツ)_/¯';
     if (base === 'neofetch') return cmdNeofetch();
     if (base === 'history') return cmdHistory();
-    if (base === 'vim' || base === 'vi' || base === 'nano' || base === 'emacs') return cmdVim(base);
+    if (base === 'vim' || base === 'vi' || base === 'nano' || base === 'emacs') { cmdVim(); return null; }
     if (base === 'matrix') { cmdMatrix(); return null; }
     if (base === 'tetris') { cmdTetris(); return null; }
     if (base === 'ascii') return cmdAscii();
@@ -141,7 +141,7 @@
       '  <span class="cmd-highlight">unflip</span>         Put the table back',
       '  <span class="cmd-highlight">shrug</span>          ¯\\_(ツ)_/¯',
       '  <span class="cmd-highlight">poop</span>           💩',
-      '  <span class="cmd-highlight">vim</span>            Good luck',
+      '  <span class="cmd-highlight">vim</span>            Try to exit. I dare you.',
       '  <span class="cmd-highlight">rm -rf /</span>       Don\'t do it...',
       '  <span class="cmd-highlight">sudo</span>           Try it',
       '  <span class="cmd-highlight">exit</span>           Try to leave',
@@ -375,14 +375,67 @@
     return lines.join('\n');
   }
 
-  function cmdVim(editor) {
-    var msgs = {
-      vim: '<span class="neon-magenta">You are now trapped in vim. Good luck getting out.</span>\n<span class="text-dim">Hint: You can\'t. No one can. Just close the tab.</span>',
-      vi: '<span class="neon-magenta">You are now trapped in vi. This is even worse than vim.</span>\n<span class="text-dim">May god have mercy on your soul.</span>',
-      nano: '<span class="neon-green">nano? What are you, a casual?</span>\n<span class="text-dim">Just kidding. ^X to exit. At least you know that.</span>',
-      emacs: '<span class="neon-magenta">Emacs is not a text editor.</span>\n<span class="text-dim">It\'s an operating system that lacks a good text editor.</span>',
-    };
-    return msgs[editor] || msgs.vim;
+  function cmdVim() {
+    var steps = [
+      { delay: 800,  cmd: ':q',                        err: 'E37: No write since last change (add ! to override)' },
+      { delay: 1200, cmd: ':q!',                       err: 'E354: Invalid register name: \'!\'', note: 'wait that worked last time...' },
+      { delay: 1000, cmd: ':wq',                       err: 'E212: Can\'t open file for writing' },
+      { delay: 800,  cmd: ':exit',                     err: 'Not an editor command: exit' },
+      { delay: 600,  cmd: ':quit',                     err: 'E37: No write since last change (add ! to override)' },
+      { delay: 500,  cmd: 'ESC ESC ESC ESC ESC',      err: null, note: 'nothing happened.' },
+      { delay: 1500, cmd: '^C ^C ^C',                  err: 'Type  :qa!  and press <Enter> to abandon all changes', note: 'oh wait—' },
+      { delay: 800,  cmd: ':qa!',                      err: 'E947: too many :qa! attempts, try :please', note: null },
+      { delay: 1200, cmd: ':please',                   err: 'Not an editor command: please', note: 'of course not.' },
+      { delay: 2000, cmd: null,                        err: null, note: '...googling "how to exit vim"' },
+      { delay: 2500, cmd: null,                        err: null, note: '1.4 million Stack Overflow views. I am not alone.' },
+      { delay: 1500, cmd: ':!kill -9 $$',              err: null, note: null },
+    ];
+
+    var vimScreen = [
+      '<span class="neon-green">~</span>',
+      '<span class="neon-green">~</span>',
+      '<span class="neon-green">~             VIM - Vi IMproved</span>',
+      '<span class="neon-green">~</span>',
+      '<span class="neon-green">~             version 9.1</span>',
+      '<span class="neon-green">~         by Bram Moolenaar et al.</span>',
+      '<span class="neon-green">~</span>',
+      '<span class="neon-green">~       type  :q<Enter>  to exit</span>',
+      '<span class="neon-green">~       type  :help<Enter>  for help</span>',
+      '<span class="neon-green">~</span>',
+      '<span class="neon-green">~</span>',
+    ];
+
+    inputLine.style.display = 'none';
+    appendOutput('<pre class="cowsay">' + vimScreen.join('\n') + '</pre>');
+    scrollToBottom();
+
+    var idx = 0;
+    function nextStep() {
+      if (idx >= steps.length) {
+        appendOutput('<span class="neon-magenta">vim process killed.</span>');
+        appendOutput('<span class="neon-green">You escaped vim. You are the 0.01%.</span>');
+        inputLine.style.display = '';
+        input.focus();
+        scrollToBottom();
+        return;
+      }
+      var s = steps[idx];
+      idx++;
+      if (s.cmd) {
+        appendOutput('<span class="text-dim">' + escapeHtml(s.cmd) + '</span>');
+      }
+      if (s.err) {
+        appendOutput('<span class="error">' + escapeHtml(s.err) + '</span>');
+      }
+      if (s.note) {
+        appendOutput('<span class="neon-yellow">' + escapeHtml(s.note) + '</span>');
+      }
+      scrollToBottom();
+      var nextDelay = idx < steps.length ? steps[idx - 1].delay + 400 : 1000;
+      setTimeout(nextStep, nextDelay);
+    }
+
+    setTimeout(nextStep, 1200);
   }
 
   function cmdMatrix() {
