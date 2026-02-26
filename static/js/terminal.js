@@ -377,18 +377,22 @@
 
   function cmdVim() {
     var steps = [
-      { delay: 800,  cmd: ':q',                        err: 'E37: No write since last change (add ! to override)' },
-      { delay: 1200, cmd: ':q!',                       err: 'E354: Invalid register name: \'!\'', note: 'wait that worked last time...' },
-      { delay: 1000, cmd: ':wq',                       err: 'E212: Can\'t open file for writing' },
-      { delay: 800,  cmd: ':exit',                     err: 'Not an editor command: exit' },
-      { delay: 600,  cmd: ':quit',                     err: 'E37: No write since last change (add ! to override)' },
-      { delay: 500,  cmd: 'ESC ESC ESC ESC ESC',      err: null, note: 'nothing happened.' },
-      { delay: 1500, cmd: '^C ^C ^C',                  err: 'Type  :qa!  and press <Enter> to abandon all changes', note: 'oh wait—' },
-      { delay: 800,  cmd: ':qa!',                      err: 'E947: too many :qa! attempts, try :please', note: null },
-      { delay: 1200, cmd: ':please',                   err: 'Not an editor command: please', note: 'of course not.' },
-      { delay: 2000, cmd: null,                        err: null, note: '...googling "how to exit vim"' },
-      { delay: 2500, cmd: null,                        err: null, note: '1.4 million Stack Overflow views. I am not alone.' },
-      { delay: 1500, cmd: ':!kill -9 $$',              err: null, note: null },
+      { delay: 2000, cmd: ':q',                        err: 'E37: No write since last change (add ! to override)' },
+      { delay: 2500, cmd: ':q!',                       err: 'E354: Invalid register name: \'!\'', note: 'wait that worked last time...' },
+      { delay: 2000, cmd: ':wq',                       err: 'E212: Can\'t open file for writing' },
+      { delay: 1800, cmd: ':exit',                     err: 'Not an editor command: exit' },
+      { delay: 1500, cmd: ':quit',                     err: 'E37: No write since last change (add ! to override)' },
+      { delay: 2500, cmd: null,                        err: null, note: '...' },
+      { delay: 1500, cmd: 'ESC ESC ESC ESC ESC',      err: null, note: 'nothing happened.' },
+      { delay: 3000, cmd: null,                        err: null, note: 'ok let me think...' },
+      { delay: 2500, cmd: '^C ^C ^C',                  err: 'Type  :qa!  and press <Enter> to abandon all changes', note: 'oh wait—' },
+      { delay: 2000, cmd: ':qa!',                      err: 'E947: too many :qa! attempts, try :please', note: null },
+      { delay: 2500, cmd: ':please',                   err: 'Not an editor command: please', note: 'of course not.' },
+      { delay: 3500, cmd: null,                        err: null, note: '...googling "how to exit vim"' },
+      { delay: 4000, cmd: null,                        err: null, note: '1.4 million Stack Overflow views. I am not alone.' },
+      { delay: 3000, cmd: ':!ps aux | grep vim',       err: null, note: 'there it is. mocking me.' },
+      { delay: 3500, cmd: null,                        err: null, note: 'I have mass. I am one with vim. vim is me.' },
+      { delay: 2500, cmd: ':!kill -9 $$',              err: null, note: null },
     ];
 
     var vimScreen = [
