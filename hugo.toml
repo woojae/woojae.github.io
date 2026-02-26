@@ -1,7 +1,6 @@
 baseURL = 'https://woojae.github.io/'
 languageCode = 'en-us'
 title = 'Woojae'
-theme = 'ananke'
 
 [services]
   [services.googleAnalytics]
