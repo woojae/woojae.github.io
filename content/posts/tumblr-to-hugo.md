@@ -8,7 +8,7 @@ I recently migrated my old Tumblr blog into this Hugo site. Tumblr was where I d
 
 ## The Problem
 
-Tumblr gives you a data export, but it's a mess. You get JSON with different post types (links, photos, videos, quotes, text), each with their own structure. To get these into Hugo, every post needs to be converted into a markdown file with proper front matter, working links, and correctly referenced images. I had hundreds of posts.
+Tumblr gives you a data export, but it's a mess. You get JSON with different post types (links, photos, videos, quotes, text), each with their own structure. To get these into Hugo, every post needs to be converted into a markdown file with proper metadata, working links, and correctly referenced images. I had hundreds of posts.
 
 In the past, I would have written a Python script from scratch, referencing the Tumblr API docs, handling each post type, debugging edge cases one at a time. It's not hard work, but it's tedious. The kind of project that sits in your backlog because the effort-to-reward ratio is terrible.
 
