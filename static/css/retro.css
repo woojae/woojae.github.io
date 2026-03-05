@@ -695,6 +695,94 @@ pre.cowsay {
   overflow: visible;
 }
 
+/* --- Links Page --- */
+.links-date-group {
+  margin-bottom: 2rem;
+}
+
+.links-date {
+  font-family: var(--font-heading);
+  font-size: 0.55rem;
+  color: var(--neon-magenta);
+  text-shadow: var(--glow-magenta);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  letter-spacing: 1px;
+}
+
+.link-item {
+  display: flex;
+  gap: 0.8rem;
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid #1a1a1a;
+  transition: background 0.2s;
+}
+
+.link-item:hover {
+  background: rgba(0, 255, 255, 0.03);
+}
+
+.link-bullet {
+  color: var(--text-dim);
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  line-height: 1.7;
+  transition: color 0.2s;
+}
+
+.link-item:hover .link-bullet {
+  color: var(--neon-cyan);
+}
+
+.link-body {
+  flex: 1;
+}
+
+.link-title {
+  font-family: var(--font-heading);
+  font-size: 0.55rem;
+  color: var(--neon-cyan);
+  line-height: 2;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.link-title:hover {
+  color: var(--neon-magenta);
+  text-shadow: var(--glow-magenta);
+}
+
+.link-desc {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+  display: block;
+}
+
+.link-desc p {
+  margin: 0;
+}
+
+.link-via {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-dim);
+  display: block;
+  margin-top: 0.3rem;
+}
+
+.link-via a {
+  color: var(--neon-green);
+}
+
+.link-via a:hover {
+  color: var(--neon-cyan);
+  text-shadow: var(--glow-cyan);
+}
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
   html {

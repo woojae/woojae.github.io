@@ -1,0 +1,38 @@
+{{ define "main" }}
+  <h1 class="page-title">{{ .Title }}</h1>
+
+  {{ $pages := .Pages.ByDate.Reverse }}
+  {{ $grouped := $pages.GroupByDate "January 2, 2006" }}
+
+  {{ range $grouped }}
+    <div class="links-date-group">
+      <h2 class="links-date">{{ .Key }}</h2>
+      {{ range .Pages }}
+        <div class="link-item">
+          <span class="link-bullet">&gt;</span>
+          <div class="link-body">
+            <a class="link-title" href="{{ .Params.link }}" target="_blank" rel="noopener">{{ .Title }}</a>
+            <span class="link-desc">{{ .Content }}</span>
+            {{ if .Params.via }}
+              <span class="link-via">(via {{ with .Params.via_url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .Params.via }}{{ with .Params.via_url }}</a>{{ end }})</span>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  {{ end }}
+
+  {{/* Pagination */}}
+  {{ $pag := .Paginator }}
+  {{ if gt $pag.TotalPages 1 }}
+    <nav class="pagination">
+      {{ if $pag.HasPrev }}
+        <a href="{{ $pag.Prev.URL }}">&lt; PREV</a>
+      {{ end }}
+      <span class="current">[ {{ $pag.PageNumber }} / {{ $pag.TotalPages }} ]</span>
+      {{ if $pag.HasNext }}
+        <a href="{{ $pag.Next.URL }}">NEXT &gt;</a>
+      {{ end }}
+    </nav>
+  {{ end }}
+{{ end }}
