@@ -20,3 +20,8 @@ title = 'Woojae'
     name = "Posts"
     url = "/posts/"
     weight = -200
+  [[menu.main]]
+    identifier = "links"
+    name = "Links"
+    url = "/links/"
+    weight = -100
