@@ -1,7 +1,8 @@
 baseURL = 'https://woojae.github.io/'
 languageCode = 'en-us'
 title = 'Woojae'
-paginate = 20
+[pagination]
+  pagerSize = 20
 
 [services]
   [services.googleAnalytics]
