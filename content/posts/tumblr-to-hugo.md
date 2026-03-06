@@ -4,7 +4,7 @@ date = 2026-02-26T10:00:00+09:00
 draft = false
 +++
 
-I recently migrated my old Tumblr blog into this Hugo site. Tumblr was where I dumped links, videos, and random thoughts from 2014 to 2015. Most of it was reblogs and shared articles, but it felt wrong to just let it disappear. A few years ago, this kind of migration would have been a weekend project. With AI, I knocked it out in about an hour. There are still some broken links and images, but I'm pretty happy with the result, it feels like I perserved a bit of history.
+I recently migrated my old Tumblr blog into this Hugo site. Tumblr was where I dumped links, videos, and random thoughts from 2014 to 2015. Most of it was reblogs and shared articles, but it felt wrong to just let it disappear. 6 months ago, this kind of migration would have been a weekend project. With AI, I knocked it out in about an hour. There are still some broken links and images, but I'm pretty happy with the result, it feels like I perserved a bit of history.
 
 In the past, I would have written a script from scratch, referencing the Tumblr API docs, handling each post type, debugging edge cases one at a time. Its super fun to do, but I have laundry to do. I also have a wife and kids who wants do something "fun" together.
 

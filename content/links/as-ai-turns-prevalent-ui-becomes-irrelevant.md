@@ -5,4 +5,4 @@ link = 'https://www.star-history.com/blog/ai-ui-irrelevant'
 via = 'Star History'
 +++
 
-As AI agents become the primary interfaces with software, polished user interfaces lose their competitive advantage. Plain-text and code-based tools that LLMs can easily navigate are becoming more valuable. Hugo + claude skills makes posting links almost as easier than reblog was on tumblr.
+As AI agents become the primary interfaces with software, polished user interfaces lose their competitive advantage. Plain-text and code-based tools that LLMs can easily navigate are becoming more valuable. Hugo + claude skills makes posting links almost as easy as reblog was on tumblr.
