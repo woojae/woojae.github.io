@@ -233,6 +233,57 @@ a:hover {
   50% { opacity: 0; }
 }
 
+/* --- Homepage Two-Column Layout --- */
+.site-main--home {
+  max-width: 1200px;
+}
+
+.homepage-layout {
+  display: flex;
+  gap: 2rem;
+}
+
+.homepage-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.homepage-sidebar {
+  width: 280px;
+  flex-shrink: 0;
+  border-left: 1px solid var(--border-color);
+  padding-left: 2rem;
+}
+
+.sidebar-link-item {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.sidebar-link-title {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--neon-cyan);
+  display: block;
+  line-height: 1.5;
+}
+
+.sidebar-link-title:hover {
+  color: var(--neon-magenta);
+  text-shadow: var(--glow-magenta);
+}
+
+.sidebar-link-date {
+  font-family: var(--font-heading);
+  font-size: 0.4rem;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+.homepage-sidebar .view-all {
+  margin-top: 1rem;
+}
+
 /* --- Post Card Grid (Homepage) --- */
 .section-title {
   font-family: var(--font-heading);
@@ -801,6 +852,19 @@ pre.cowsay {
 
   .site-main {
     padding: 1rem;
+  }
+
+  .homepage-layout {
+    flex-direction: column;
+  }
+
+  .homepage-sidebar {
+    width: 100%;
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+    margin-top: 1rem;
   }
 
   .post-grid {

@@ -16,7 +16,7 @@
 </head>
 <body>
   {{ partial "site-header.html" . }}
-  <main class="site-main">
+  <main class="site-main{{ if .IsHome }} site-main--home{{ end }}">
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "site-footer.html" . }}
