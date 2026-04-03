@@ -4,7 +4,7 @@ date = 2026-04-02T10:00:00+09:00
 draft = false
 +++
 
-Half the world is going nearsighted. In parts of East Asia, myopia rates among young people are pushing 80-90%. That's not a typo. We're talking about a condition that barely existed in pre-industrial populations now affecting the vast majority of kids in some countries.
+Half the world is going nearsighted. In parts of East Asia, myopia rates among young people are pushing 80-90%. We're talking about a condition that barely existed in pre-industrial populations now affecting the vast majority of kids in some countries.
 
 And until recently, we didn't really know why.
 
@@ -61,18 +61,8 @@ Regular glasses just correct your vision. These lenses try to correct your visio
 
 The most honest thing you can say about these lenses is that they probably work better than we fully understand. Anyone who claims the mechanism is completely solved is selling you something.
 
-## Why This Matters
-
-Myopia isn't just an inconvenience. High myopia — the kind that keeps progressing — significantly increases the risk of retinal detachment, glaucoma, and other serious eye conditions later in life. Every diopter of progression you can prevent in childhood is a real long-term health win.
+## The Future
 
 The fact that something this common had no solid causal theory until recently is kind of astonishing. We landed on the moon in 1969, but we couldn't explain why half the kids in Seoul need glasses until the 2000s.
 
-## The Practical Takeaway
-
-If you have kids, the prescription is simple:
-
-- **Get them outside.** Aim for 2 hours a day. This is probably the single most impactful thing.
-- **Manage near work.** Not "ban screens" — just don't let the visual world become "12 inches away, all day, indoors." Breaks help. Distance helps. Variety helps.
-- **If they're progressing**, talk to an optometrist about myopia-control lenses. The science behind them is real.
-
-The goal isn't to fear screens or ban homework. It's to recognize that the developing eye needs a varied visual diet — near and far, dim and bright, indoors and out. Modern life accidentally created an environment where kids' eyes get the optical equivalent of only eating sugar. The fix isn't complicated. We just had to figure out what was actually going on first.
+That should also give us some hope. Many chronic conditions of modern life such as allergies, obesity, and even some forms of cancer, may also become far better understood, prevented, or treated as science catches up.
