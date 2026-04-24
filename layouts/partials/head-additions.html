@@ -1,5 +1,10 @@
-<!-- Security headers -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://d3nu6st0wla7pm.cloudfront.net https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://www.youtube.com; object-src 'none'; base-uri 'self'; form-action 'self';">
+<!-- Security headers
+     NOTE: script-src uses SHA-256 hashes instead of 'unsafe-inline'.
+     If you change ANY inline <script> content (including whitespace),
+     recompute the hash:
+       python3 -c "import hashlib,base64; print('sha256-'+base64.b64encode(hashlib.sha256(CONTENT.encode()).digest()).decode())"
+-->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-65RSUrtD/aKzNVNkqHcPd+p8unL4VWNqQnN4z0WMLQc=' 'sha256-qCe2swQoQCaUiEAYOog8Z9OqOKWzIOeqDJVNN5gdqVY=' https://www.googletagmanager.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://d3nu6st0wla7pm.cloudfront.net https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://www.youtube.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SSKRJFJGB"></script>
