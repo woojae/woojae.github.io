@@ -1,0 +1,31 @@
+{{ define "page-styles" }}
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/terminal.css">
+{{ end }}
+
+{{ define "main" }}
+  {{ $pages := where .Site.RegularPages "Section" "posts" }}
+  {{ $postData := slice }}
+  {{ range $pages }}
+    {{ $postData = $postData | append (dict "title" .Title "url" .Permalink "date" (.Date.Format "2006-01-02")) }}
+  {{ end }}
+  <section class="window window--terminal" id="hero-terminal" data-posts='{{ $postData | jsonify }}'>
+    <div class="window-titlebar">
+      <a class="window-close" href="/programs/" aria-label="Close"></a>
+      <h1 class="window-title">Terminal</h1>
+    </div>
+    <div class="window-body">
+      <div class="terminal-body">
+        <div id="terminal-output" class="terminal-output"></div>
+        <div id="terminal-input-line" class="terminal-input-line">
+          <span class="prompt-symbol">$</span>
+          <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" autofocus>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}
+
+{{ define "page-scripts" }}
+  <script src="/js/terminal.js" defer></script>
+{{ end }}

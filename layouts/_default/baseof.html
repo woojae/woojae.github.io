@@ -8,24 +8,26 @@
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/retro.css">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/desktop.css">
+  {{ block "page-styles" . }}{{ end }}
   {{ block "head-additions" . }}
     {{ partial "head-additions.html" . }}
   {{ end }}
 </head>
 <body>
   {{ partial "site-header.html" . }}
-  <main class="site-main{{ if .IsHome }} site-main--home{{ end }}">
+  <main class="desktop-main">
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "site-footer.html" . }}
+  <script src="/js/desktop.js" defer></script>
+  {{ block "page-scripts" . }}{{ end }}
   {{ if .Store.Get "hasMermaid" }}
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
     mermaid.initialize({ startOnLoad: true });
   </script>
   {{ end }}
-  <div class="scanlines"></div>
 </body>
 </html>

@@ -1,10 +1,18 @@
-<header class="site-header">
-  <div class="site-logo">
-    <a href="{{ .Site.BaseURL }}">[ {{ .Site.Title }} ]</a>
+<header class="desktop-top">
+  <div class="desktop-logo">
+    <a href="{{ "/" | relURL }}" aria-label="{{ .Site.Title }} — home">
+      <span class="logo-badge"><img src="/favicon.svg" alt=""></span>
+      <span class="logo-mark">woojae</span>
+    </a>
   </div>
-  <nav class="site-nav">
-    {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}">{{ .Name }}</a>
-    {{ end }}
+  <nav class="desktop-icons" aria-label="Desktop">
+    <a class="desktop-icon" href="/programs/">
+      <span class="icon-tile">{{ partial "icon.html" "diamond" }}</span>
+      <span class="icon-label">Programs</span>
+    </a>
+    <a class="desktop-icon" href="/files/">
+      <span class="icon-tile">{{ partial "icon.html" "drive" }}</span>
+      <span class="icon-label">Files</span>
+    </a>
   </nav>
 </header>

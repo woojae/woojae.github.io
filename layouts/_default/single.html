@@ -1,17 +1,18 @@
 {{ define "main" }}
-  <article class="terminal-window">
-    <div class="terminal-titlebar">
-      <span class="terminal-dot red"></span>
-      <span class="terminal-dot yellow"></span>
-      <span class="terminal-dot green"></span>
-      <span class="terminal-title">~/posts/{{ .File.BaseFileName }}</span>
+  <article class="window reader">
+    <div class="window-titlebar">
+      <a class="window-close" href="{{ with .Parent }}{{ .RelPermalink }}{{ else }}/{{ end }}" aria-label="Close"></a>
+      <h1 class="window-title">{{ .Title }}</h1>
+      <div class="window-actions">
+        <button type="button" data-action="print" aria-label="Print">{{ partial "icon.html" "print" }}</button>
+      </div>
     </div>
-    <div class="terminal-body">
-      <header class="post-header">
-        <div class="post-meta">{{ .Date.Format "2006-01-02" }}</div>
-        <h1 class="post-title">{{ .Title }}</h1>
+    <div class="window-body">
+      <header>
+        <div class="reader-title">{{ .Title }}</div>
+        <div class="reader-meta">{{ .Date.Format "January 2, 2006" }} · {{ .Site.Title }}</div>
       </header>
-      <div class="post-content">
+      <div class="reader-content">
         {{ .Content }}
       </div>
     </div>
