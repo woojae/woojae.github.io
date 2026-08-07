@@ -1,0 +1,63 @@
+{{ define "page-styles" }}
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/tetris.css">
+{{ end }}
+
+{{ define "main" }}
+  <section class="window window--tetris">
+    <div class="window-titlebar">
+      <a class="window-close" href="/programs/" aria-label="Close"></a>
+      <h1 class="window-title">Tetris</h1>
+    </div>
+    <div class="window-body">
+      <div class="tetris-layout">
+        <div class="tetris-stage">
+          <canvas id="tetris-board" width="300" height="600" aria-label="Tetris playfield"></canvas>
+          <div id="tetris-overlay" class="tetris-overlay">
+            <div id="tetris-overlay-title" class="tetris-overlay-title">TETRIS</div>
+            <p id="tetris-overlay-msg" class="tetris-overlay-msg">arrows to move &middot; space to drop</p>
+            <button id="tetris-start" class="tetris-btn" type="button">Play</button>
+          </div>
+        </div>
+        <aside class="tetris-side">
+          <div class="tetris-panel">
+            <div class="tetris-panel-label">Next</div>
+            <canvas id="tetris-next" width="96" height="96" aria-label="Next piece"></canvas>
+          </div>
+          <div class="tetris-panel">
+            <div class="tetris-panel-label">Score</div>
+            <div id="tetris-score" class="tetris-panel-value">0</div>
+          </div>
+          <div class="tetris-panel">
+            <div class="tetris-panel-label">Lines</div>
+            <div id="tetris-lines" class="tetris-panel-value">0</div>
+          </div>
+          <div class="tetris-panel">
+            <div class="tetris-panel-label">Level</div>
+            <div id="tetris-level" class="tetris-panel-value">1</div>
+          </div>
+          <div class="tetris-panel">
+            <div class="tetris-panel-label">Best</div>
+            <div id="tetris-high" class="tetris-panel-value">0</div>
+          </div>
+          <div class="tetris-help">
+            &larr;&rarr; move<br>
+            &uarr; rotate &middot; &darr; soft drop<br>
+            space hard drop &middot; p pause
+          </div>
+        </aside>
+      </div>
+      <div class="tetris-touch" aria-label="Touch controls">
+        <button class="tetris-touch-btn" type="button" data-action="left" aria-label="Move left">&larr;</button>
+        <button class="tetris-touch-btn" type="button" data-action="rotate" aria-label="Rotate">&#10227;</button>
+        <button class="tetris-touch-btn" type="button" data-action="right" aria-label="Move right">&rarr;</button>
+        <button class="tetris-touch-btn" type="button" data-action="down" aria-label="Soft drop">&darr;</button>
+        <button class="tetris-touch-btn tetris-touch-btn--wide" type="button" data-action="drop" aria-label="Hard drop">Drop</button>
+      </div>
+    </div>
+  </section>
+{{ end }}
+
+{{ define "page-scripts" }}
+  <script src="/js/tetris.js" defer></script>
+{{ end }}

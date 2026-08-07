@@ -1,0 +1,180 @@
+/* Pomodoro program — focus timer styles scoped to the pomodoro window. */
+
+.window--pomodoro {
+  --tomato: #e5484d;
+  --tomato-soft: rgba(229, 72, 77, 0.12);
+  max-width: 460px;
+}
+
+.window--pomodoro .window-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+  padding: 32px 28px 36px;
+}
+
+.pomo-modes {
+  display: flex;
+  gap: 6px;
+  background: #f2f3f5;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.pomo-mode {
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: none;
+  border: none;
+  border-radius: 7px;
+  padding: 7px 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.pomo-mode:hover {
+  color: var(--ink);
+}
+
+.pomo-mode.is-active {
+  background: #fff;
+  color: var(--tomato);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.pomo-dial {
+  position: relative;
+  width: 240px;
+  height: 240px;
+}
+
+.pomo-dial svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.pomo-ring-track {
+  fill: none;
+  stroke: #f0f1f3;
+  stroke-width: 10;
+}
+
+.pomo-ring {
+  fill: none;
+  stroke: var(--tomato);
+  stroke-width: 10;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 250ms linear;
+}
+
+.pomo-readout {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.pomo-time {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.pomo-phase {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.pomo-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.pomo-btn {
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 28px;
+  cursor: pointer;
+  background: #f2f3f5;
+  color: var(--ink);
+  transition: transform 120ms ease;
+}
+
+.pomo-btn:hover {
+  transform: scale(1.04);
+}
+
+.pomo-btn--primary {
+  background: var(--tomato);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(229, 72, 77, 0.35);
+}
+
+.pomo-sessions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.pomo-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.pomo-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e4e6e9;
+}
+
+.pomo-dot.is-current {
+  background: var(--tomato-soft);
+  box-shadow: inset 0 0 0 2px var(--tomato);
+}
+
+.pomo-dot.is-done {
+  background: var(--tomato);
+}
+
+.pomo-session-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .window--pomodoro .window-body {
+    padding: 26px 18px 30px;
+  }
+
+  .pomo-dial {
+    width: 210px;
+    height: 210px;
+  }
+
+  .pomo-time {
+    font-size: 2.7rem;
+  }
+
+  .pomo-mode {
+    font-size: 0.78rem;
+    padding: 7px 10px;
+  }
+}
