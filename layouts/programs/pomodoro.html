@@ -1,0 +1,43 @@
+{{ define "page-styles" }}
+  <link rel="stylesheet" href="/css/pomodoro.css">
+{{ end }}
+
+{{ define "main" }}
+  <section class="window window--pomodoro">
+    <div class="window-titlebar">
+      <a class="window-close" href="/programs/" aria-label="Close"></a>
+      <h1 class="window-title">Pomodoro</h1>
+    </div>
+    <div class="window-body">
+      <div class="pomo-modes" role="group" aria-label="Timer mode">
+        <button class="pomo-mode is-active" type="button" data-mode="focus" aria-pressed="true">Focus</button>
+        <button class="pomo-mode" type="button" data-mode="short" aria-pressed="false">Short Break</button>
+        <button class="pomo-mode" type="button" data-mode="long" aria-pressed="false">Long Break</button>
+      </div>
+      <div class="pomo-dial">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <circle class="pomo-ring-track" cx="100" cy="100" r="90"/>
+          <circle id="pomo-ring" class="pomo-ring" cx="100" cy="100" r="90"/>
+        </svg>
+        <div class="pomo-readout">
+          <div id="pomo-time" class="pomo-time">25:00</div>
+          <div id="pomo-phase" class="pomo-phase">time to focus</div>
+        </div>
+      </div>
+      <div class="pomo-controls">
+        <button id="pomo-toggle" class="pomo-btn pomo-btn--primary" type="button">Start</button>
+        <button id="pomo-reset" class="pomo-btn" type="button">Reset</button>
+      </div>
+      <div class="pomo-sessions">
+        <div id="pomo-dots" class="pomo-dots" aria-hidden="true">
+          <span class="pomo-dot"></span><span class="pomo-dot"></span><span class="pomo-dot"></span><span class="pomo-dot"></span>
+        </div>
+        <div id="pomo-session-label" class="pomo-session-label">session 1 of 4</div>
+      </div>
+    </div>
+  </section>
+{{ end }}
+
+{{ define "page-scripts" }}
+  <script src="/js/pomodoro.js" defer></script>
+{{ end }}

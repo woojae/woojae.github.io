@@ -1,0 +1,193 @@
+/* Tetris program — retro arcade styles scoped to the tetris window. */
+
+.window--tetris {
+  --bg-tetris: #0d0d0d;
+  --neon-cyan: #00ffff;
+  --neon-magenta: #ff00ff;
+  --neon-green: #39ff14;
+  --text-dim: #888888;
+  --font-heading: 'Press Start 2P', monospace;
+  --font-body: 'VT323', monospace;
+  max-width: 640px;
+}
+
+.window--tetris .window-body {
+  padding: 24px;
+  background: var(--bg-tetris);
+}
+
+.tetris-layout {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tetris-stage {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+#tetris-board {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  border: 2px solid rgba(0, 255, 255, 0.35);
+  border-radius: 4px;
+}
+
+.tetris-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: rgba(13, 13, 13, 0.88);
+  border-radius: 4px;
+  text-align: center;
+  padding: 16px;
+}
+
+.tetris-overlay.is-hidden {
+  display: none;
+}
+
+.tetris-overlay-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--neon-cyan);
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff44;
+  line-height: 1.6;
+}
+
+.tetris-overlay-msg {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+
+.tetris-btn {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  color: var(--bg-tetris);
+  background: var(--neon-green);
+  border: none;
+  border-radius: 6px;
+  padding: 12px 22px;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(57, 255, 20, 0.5);
+}
+
+.tetris-btn:hover {
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.8);
+}
+
+.tetris-side {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 120px;
+  flex: 0 0 auto;
+}
+
+.tetris-panel {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.tetris-panel-label {
+  font-family: var(--font-heading);
+  font-size: 0.55rem;
+  color: var(--neon-magenta);
+  margin-bottom: 4px;
+  letter-spacing: 0.06em;
+}
+
+.tetris-panel-value {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  color: var(--neon-green);
+  line-height: 1.1;
+}
+
+#tetris-next {
+  display: block;
+  width: 96px;
+  height: 96px;
+}
+
+.tetris-help {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+.tetris-touch {
+  display: none;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.tetris-touch-btn {
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  color: var(--neon-cyan);
+  background: none;
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  border-radius: 8px;
+  width: 56px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.tetris-touch-btn:active {
+  background: rgba(0, 255, 255, 0.15);
+}
+
+.tetris-touch-btn--wide {
+  width: auto;
+  padding: 0 18px;
+}
+
+@media (max-width: 640px) {
+  .window--tetris .window-body {
+    padding: 16px;
+  }
+
+  .tetris-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tetris-side {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+
+  .tetris-panel {
+    flex: 1 1 40%;
+  }
+
+  .tetris-help {
+    display: none;
+  }
+
+  .tetris-touch {
+    display: flex;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .tetris-touch {
+    display: flex;
+  }
+}
