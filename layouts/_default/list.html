@@ -1,29 +1,27 @@
 {{ define "main" }}
-  <h1 class="page-title">{{ .Title }}</h1>
-
-  <ul class="post-list">
-    {{ range .Paginator.Pages }}
-      <li class="post-list-item">
-        <span class="post-list-cursor">&gt;</span>
-        <span class="post-list-date">{{ .Date.Format "2006-01-02" }}</span>
-        <span class="post-list-title">
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </span>
-      </li>
+  <section class="window window--wide">
+    <div class="window-titlebar">
+      <a class="window-close" href="/files/" aria-label="Close"></a>
+      <h1 class="window-title">{{ .Title }}</h1>
+    </div>
+    <div class="window-body">
+      <div class="icon-grid">
+        {{ range .Paginator.Pages }}
+          <a class="file-icon" href="{{ .RelPermalink }}">
+            {{ partial "icon.html" "doc" }}
+            <span class="file-name">{{ .Title }}</span>
+            <span class="file-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+          </a>
+        {{ end }}
+      </div>
+    </div>
+    {{ $pag := .Paginator }}
+    {{ if gt $pag.TotalPages 1 }}
+      <div class="window-statusbar">
+        <span>{{ if $pag.HasPrev }}<a href="{{ $pag.Prev.URL }}">← Prev</a>{{ end }}</span>
+        <span>Page {{ $pag.PageNumber }} of {{ $pag.TotalPages }}</span>
+        <span>{{ if $pag.HasNext }}<a href="{{ $pag.Next.URL }}">Next →</a>{{ end }}</span>
+      </div>
     {{ end }}
-  </ul>
-
-  {{/* Pagination */}}
-  {{ $pag := .Paginator }}
-  {{ if gt $pag.TotalPages 1 }}
-    <nav class="pagination">
-      {{ if $pag.HasPrev }}
-        <a href="{{ $pag.Prev.URL }}">&lt; PREV</a>
-      {{ end }}
-      <span class="current">[ {{ $pag.PageNumber }} / {{ $pag.TotalPages }} ]</span>
-      {{ if $pag.HasNext }}
-        <a href="{{ $pag.Next.URL }}">NEXT &gt;</a>
-      {{ end }}
-    </nav>
-  {{ end }}
+  </section>
 {{ end }}

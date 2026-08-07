@@ -1,0 +1,4 @@
++++
+title = 'Terminal'
+layout = 'terminal'
++++
